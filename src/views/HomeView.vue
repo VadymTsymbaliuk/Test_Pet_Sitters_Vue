@@ -35,6 +35,7 @@
   background: #020202;
   display: flex;
   color: white;
+  justify-content: space-between;
 
   &-right {
     display: flex;
