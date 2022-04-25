@@ -30,15 +30,15 @@
           </div>
         </div>
       </div>
-      <div class="header_wrapper_white_down">
-        <div>home</div>
-        <div>pages</div>
-        <div>shortcodes</div>
-        <div>jobs</div>
-        <div>sitters</div>
-        <div>blog</div>
-        <div>portfolio</div>
-        <div>contacts</div>
+      <div class="header_wrapper_white_down mb-4">
+        <div>HOME</div>
+        <div>PAGES</div>
+        <div>SHORTCODES</div>
+        <div>JOBS</div>
+        <div>SITTERS</div>
+        <div>BLOG</div>
+        <div>PORTFOLIO</div>
+        <div>CONTACTS</div>
       </div>
     </div>
   </header>
