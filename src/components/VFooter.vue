@@ -33,9 +33,18 @@
       </div>
     </div>
     <div class="footer_bottom d-flex justify-content-around">
-      <div>2022. all rights reserved. done by dan fisher.</div>
-      <div>keep in touch</div>
-      <div></div>
+      <div class="d-flex align-items-center">
+        2022. all rights reserved. done by dan fisher.
+      </div>
+      <div class="d-flex">
+        <div class="d-flex align-items-center mr-3">keep in touch</div>
+        <div class="social_icons_wrapper">
+          <img class="pr-2" src="../../public/img/google-plus.png" alt="" />
+          <img class="pr-2" src="../../public/img/instagram.png" alt="" />
+          <img class="pr-2" src="../../public/img/facebook.png" alt="" />
+          <img class="pr-2" src="../../public/img/twitter.png" alt="" />
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -47,6 +56,11 @@ export default {
 </script>
 
 <style scoped>
+footer a {
+  text-decoration: none;
+  color: #f3f5eb;
+}
+
 .footer-bg {
   background: #575757;
 }
@@ -54,5 +68,12 @@ export default {
 .footer_bottom {
   color: white;
   background: #020202;
+}
+
+.social_icons_wrapper {
+  background: #686868;
+  padding: 3px 7px 3px 7px;
+  border-radius: 5px;
+  margin: 18px 0;
 }
 </style>

@@ -3,6 +3,9 @@
   <main class="page_content">
     <router-view />
     <card />
+    <card />
+    <card />
+    <card />
   </main>
   <VFooter />
 </template>

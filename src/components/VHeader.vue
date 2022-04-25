@@ -13,17 +13,32 @@
     </div>
     <div class="header_wrapper_white">
       <div class="header_wrapper_white_up">
-        <div>1</div>
-        <div>2</div>
+        <div>
+          <img src="../../public/img/pet_sitter_logo.png" alt="" />
+          <div><i>Find an Awesome Aet Sitter</i></div>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="pb-2">
+            <a class="p-2" href=""> <b>call us</b> : + 1(234)567890</a>
+            <a class="p-2" href=""><b>Email: </b>petsitter@dan-fisher.com</a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <img class="pr-2" src="../../public/img/google-plus.png" alt="" />
+            <img class="pr-2" src="../../public/img/instagram.png" alt="" />
+            <img class="pr-2" src="../../public/img/facebook.png" alt="" />
+            <img class="pr-2" src="../../public/img/twitter.png" alt="" />
+          </div>
+        </div>
       </div>
       <div class="header_wrapper_white_down">
         <div>home</div>
-        <div>home</div>
-        <div>home</div>
-        <div>home</div>
-        <div>home</div>
-        <div>home</div>
-        <div>home</div>
+        <div>pages</div>
+        <div>shortcodes</div>
+        <div>jobs</div>
+        <div>sitters</div>
+        <div>blog</div>
+        <div>portfolio</div>
+        <div>contacts</div>
       </div>
     </div>
   </header>
@@ -55,7 +70,10 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+
 .header_wrapper_white_up {
+  padding-top: 80px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: space-around;
 }
