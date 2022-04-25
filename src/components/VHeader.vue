@@ -52,6 +52,8 @@ export default {
 
 <style scoped lang="scss">
 .header_wrapper_black {
+  padding-left: 30px;
+  padding-right: 30px;
   background: #020202;
   display: flex;
   color: white;
@@ -63,6 +65,10 @@ export default {
 
   &-left {
     display: flex;
+  }
+
+  & a {
+    color: white;
   }
 }
 
