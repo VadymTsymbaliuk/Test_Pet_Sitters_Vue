@@ -1,20 +1,20 @@
 <template>
-  <div class="container">
-    <div class="card">
-      <div class="d-flex">
-        <img class="img_border" src="../../public/img/toy_terer.png" alt="a" />
-        <div class="d-flex flex-column justify-content-center pl-2">
-          <div>Dog Dister Needed</div>
-          <p>Brenna Femiano</p>
-        </div>
-      </div>
-      <div><img src="../../public/img/map_point.png" alt="" /> New York</div>
-      <div>
-        Pet Sitter
-        <p>posted 4 years ago</p>
+  <!--  <div class="container">-->
+  <div class="card">
+    <div class="d-flex">
+      <img class="img_border" src="../../public/img/toy_terer.png" alt="a" />
+      <div class="d-flex flex-column justify-content-center pl-2">
+        <div>Dog Dister Needed</div>
+        <p>Brenna Femiano</p>
       </div>
     </div>
+    <div><img src="../../public/img/map_point.png" alt="" /> New York</div>
+    <div>
+      Pet Sitter
+      <p>posted 4 years ago</p>
+    </div>
   </div>
+  <!--  </div>-->
 </template>
 
 <script>

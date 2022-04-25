@@ -2,10 +2,6 @@
   <VHeader />
   <main class="page_content">
     <router-view />
-    <card />
-    <card />
-    <card />
-    <card />
   </main>
   <VFooter />
 </template>
@@ -14,9 +10,8 @@
 <script>
 import VHeader from "@/components/VHeader";
 import VFooter from "@/components/VFooter";
-import Card from "@/components/Card";
 
 export default {
-  components: { VHeader, VFooter, Card },
+  components: { VHeader, VFooter },
 };
 </script>
