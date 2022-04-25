@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer-bg">
-    <div class="d-flex justify-content-between">
+  <footer>
+    <div class="d-flex justify-content-around footer-bg">
       <div class="d-flex flex-column">
         <div>information</div>
         <a href="">faqs</a>
