@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <hr />
+
     <section class="bg_slider">
       <div class="container">
         <div class="wrapper_slider_form">
@@ -32,23 +33,37 @@
     <card />
     <hr />
   </div>
+  <div
+    class="wrapper_support d-flex align-content-center justify-content-center"
+  >
+    <div class="align-content-center justify-content-center">
+      <h3>Need Support?</h3>
+      <p>interdum et malesuada fames ac ante venenatis ipsum non.</p>
+      <button>Contact Us</button>
+    </div>
+  </div>
 </template>
 <style scoped lang="scss">
 .bg_slider {
   background-image: url("../../public/img/bg_slider.png");
   background-size: contain;
+  background-repeat: no-repeat;
   padding: 60px 0;
 }
+
 .wrapper_slider_form {
   position: relative;
 }
+
 .form_slide {
   border-radius: 10px;
+
   h4 {
     margin-top: 40px;
     margin-bottom: 20px;
     color: white;
   }
+
   background: #686868;
   position: absolute;
   right: 20px;
@@ -58,6 +73,7 @@
   width: 340px;
   height: 300px;
   z-index: 2;
+
   input {
     padding: 5px;
     width: 80%;
@@ -65,6 +81,7 @@
     border-radius: 10px;
     border: none;
   }
+
   button {
     background: #a6ce39;
     border: none;
@@ -73,6 +90,7 @@
     border-radius: 10px;
   }
 }
+
 .select-css {
   width: 80%;
   margin-bottom: 20px;
@@ -80,10 +98,28 @@
   border: none;
   padding: 5px;
 }
+
+.wrapper_support {
+  button {
+    border: none;
+    background: #39b3ce;
+    color: #f3f5eb;
+    border-radius: 10px;
+    padding: 5px 45px;
+  }
+  color: #f3f5eb;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  text-align: center;
+  background-image: url("../../public/img/bg_suport.png");
+  background-size: contain;
+  background-repeat: repeat;
+}
 </style>
 <script>
 import VSlider from "@/components/VSlider";
 import Card from "@/components/Card";
+
 export default {
   name: "HomeView",
   components: { VSlider, Card },
