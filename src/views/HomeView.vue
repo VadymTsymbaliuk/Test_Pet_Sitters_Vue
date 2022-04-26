@@ -26,6 +26,7 @@
         </div>
       </div>
     </section>
+
     <hr />
     <card />
     <card />
@@ -33,8 +34,34 @@
     <card />
     <hr />
   </div>
+  <section class="petsitter_partners_wrapper">
+    <div class="d-flex justify-content-center">
+      <div class="justify-content-center border_pp_wrapper"></div>
+      <div class="text-center">
+        <h3>PETSITTER IN NUMBERS</h3>
+        <span>Site Stats</span>
+      </div>
+      <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+  </section>
+  <hr />
   <div
-    class="wrapper_support d-flex align-content-center justify-content-center"
+    class="wrapper_support bg_support_2 d-flex align-content-center justify-content-center"
+  >
+    <div class="align-content-center justify-content-center">
+      <h3>best professional care?</h3>
+      <p>iinterdum et malesuada fames ac ante venenatis ipsum non.</p>
+      <button>read more</button>
+    </div>
+  </div>
+  <hr />
+  <card />
+  <card />
+  <card />
+  <card />
+  <hr />
+  <div
+    class="wrapper_support bg_support d-flex align-content-center justify-content-center"
   >
     <div class="align-content-center justify-content-center">
       <h3>Need Support?</h3>
@@ -49,6 +76,13 @@
   background-size: contain;
   background-repeat: no-repeat;
   padding: 60px 0;
+}
+
+.border_pp_wrapper {
+  border-bottom: 1px solid #c4c4c4;
+  flex-grow: 1;
+  height: 0;
+  margin: auto;
 }
 
 .wrapper_slider_form {
@@ -107,13 +141,21 @@
     border-radius: 10px;
     padding: 5px 45px;
   }
+
   color: #f3f5eb;
   padding-bottom: 80px;
   padding-top: 80px;
   text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg_support {
   background-image: url("../../public/img/bg_suport.png");
-  background-size: contain;
-  background-repeat: repeat;
+}
+
+.bg_support_2 {
+  background-image: url("../../public/img/bg_suport_2.png");
 }
 </style>
 <script>

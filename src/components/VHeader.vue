@@ -2,13 +2,13 @@
   <header>
     <div class="header_wrapper_black">
       <div class="header_wrapper_black_left">
-        <a href="">pricing</a>
-        <a href="">about us</a>
-        <a href="">faqs</a>
+        <a href=""> PRICING</a>
+        <a href="">ABOUT US</a>
+        <a href="">FAQS</a>
       </div>
       <div class="header_wrapper_black_right">
-        <a href="">register</a>
-        <a href="">Login</a>
+        <a href=""> REGISTER</a>
+        <a href=""><span class="icon-icons8-youtube"></span> LOGIN</a>
       </div>
     </div>
     <div class="header_wrapper_white">
@@ -52,12 +52,12 @@ export default {
 
 <style scoped lang="scss">
 .header_wrapper_black {
-  padding-left: 30px;
-  padding-right: 30px;
   background: #020202;
   display: flex;
   color: white;
-  justify-content: space-between;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
 
   &-right {
     display: flex;
@@ -69,6 +69,16 @@ export default {
 
   & a {
     color: white;
+  }
+}
+.header_wrapper_black_left {
+  a {
+    padding: 10px;
+  }
+}
+.header_wrapper_black_right {
+  a {
+    padding: 10px;
   }
 }
 
