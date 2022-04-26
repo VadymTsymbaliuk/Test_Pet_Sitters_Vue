@@ -263,6 +263,15 @@
 .bg_support_2 {
   background-image: url("../../public/img/bg_suport_2.png");
 }
+@media screen and (max-width: 768px) {
+  .bg_slider {
+    background-size: cover;
+  }
+  //.form_slide {
+  //  width: 200px;
+  //  height: 300px;
+  //}
+}
 </style>
 <script>
 import VSlider from "@/components/VSlider";

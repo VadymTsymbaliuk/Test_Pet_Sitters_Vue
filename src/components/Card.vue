@@ -41,4 +41,10 @@ export default {
 .img_border {
   border-radius: 50%;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 5px 5px 5px 5px;
+  }
+}
 </style>
