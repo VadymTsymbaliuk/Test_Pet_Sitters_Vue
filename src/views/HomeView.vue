@@ -26,15 +26,8 @@
         </div>
       </div>
     </section>
-
-    <hr />
-    <card />
-    <card />
-    <card />
-    <card />
-    <hr />
   </div>
-  <section class="petsitter_partners_wrapper">
+  <section class="mt-4 mb-4">
     <div class="d-flex justify-content-center">
       <div class="justify-content-center border_pp_wrapper"></div>
       <div class="text-center">
@@ -42,6 +35,47 @@
         <span>Site Stats</span>
       </div>
       <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+    <div class="d-flex justify-content-around">
+      <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
+        <img src="../../public/img/pawprint_icon.png" alt="" />
+        <span class="icon_number">8</span>
+        <span>All Jobs</span>
+      </div>
+      <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
+        <img src="../../public/img/checked_icon.png" alt="" />
+        <span class="icon_number">0</span>
+        <span>Jobs Filled</span>
+      </div>
+      <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
+        <img src="../../public/img/user_icon.png" alt="" />
+        <span class="icon_number">8</span>
+        <span>Pet Sitters</span>
+      </div>
+      <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
+        <img src="../../public/img/users_icon.png" alt="" />
+        <span class="icon_number">231</span>
+        <span>Users</span>
+      </div>
+    </div>
+  </section>
+  <section class="petsitter_partners_wrapper">
+    <div class="mb-4 d-flex justify-content-center">
+      <div class="justify-content-center border_pp_wrapper"></div>
+      <div class="mb-3 text-center">
+        <h3>Pet Sitting Jobs</h3>
+        <span>Main Features</span>
+      </div>
+      <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+    <div class="container">
+      <card />
+      <card />
+      <card />
+      <card />
+    </div>
+    <div class="card_btm_wrapper">
+      <button>load more listings</button>
     </div>
   </section>
   <hr />
@@ -54,12 +88,52 @@
       <button>read more</button>
     </div>
   </div>
-  <hr />
-  <card />
-  <card />
-  <card />
-  <card />
-  <hr />
+  <section class="petsitter_partners_wrapper">
+    <div class="mb-4 d-flex justify-content-center">
+      <div class="justify-content-center border_pp_wrapper"></div>
+      <div class="mb-3 text-center">
+        <h3>ALL PET SITTERS</h3>
+        <span>Main Features</span>
+      </div>
+      <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+    <div class="container">
+      <card />
+      <card />
+      <card />
+      <card />
+    </div>
+    <div class="card_btm_wrapper">
+      <button>load more Resume</button>
+    </div>
+  </section>
+  <section class="mt-4 mb-4 container">
+    <div class="d-flex justify-content-center">
+      <div class="justify-content-center border_pp_wrapper"></div>
+      <div class="text-center">
+        <h3 class="ml-5 mr-5">OUR PARTNERS</h3>
+      </div>
+      <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <div>tresdiohg</div>
+        <div>tresdiohg</div>
+      </div>
+      <div class="col">
+        <div>tresdiohg</div>
+        <div>tresdiohg</div>
+      </div>
+      <div class="col">
+        <div>tresdiohg</div>
+        <div>tresdiohg</div>
+      </div>
+      <div class="col">
+        <div>tresdiohg</div>
+        <div>tresdiohg</div>
+      </div>
+    </div>
+  </section>
   <div
     class="wrapper_support bg_support d-flex align-content-center justify-content-center"
   >
@@ -87,6 +161,32 @@
 
 .wrapper_slider_form {
   position: relative;
+}
+
+.card_btm_wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  button {
+    color: #ffffff;
+    background: #39b3ce;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 50px;
+  }
+}
+
+.petsitter_partners_wrapper {
+  background: #f3f5eb;
+  padding-top: 30px;
+}
+
+.wrapper_icon {
+  img {
+    align-self: center;
+    max-width: 40px;
+  }
 }
 
 .form_slide {
@@ -125,6 +225,12 @@
   }
 }
 
+.icon_number {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000000;
+}
+
 .select-css {
   width: 80%;
   margin-bottom: 20px;
@@ -151,7 +257,7 @@
 }
 
 .bg_support {
-  background-image: url("../../public/img/bg_suport.png");
+  background-image: url("../../public/img/bg_suport_2.png");
 }
 
 .bg_support_2 {

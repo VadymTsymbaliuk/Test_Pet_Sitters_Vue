@@ -1,5 +1,4 @@
 <template>
-  <!--  <div class="container">-->
   <div class="card">
     <div class="d-flex">
       <img class="img_border" src="../../public/img/toy_terer.png" alt="a" />
@@ -14,7 +13,6 @@
       <p>posted 4 years ago</p>
     </div>
   </div>
-  <!--  </div>-->
 </template>
 
 <script>

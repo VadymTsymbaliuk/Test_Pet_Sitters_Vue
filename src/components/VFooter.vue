@@ -124,4 +124,10 @@ footer a {
   border-radius: 5px;
   margin: 18px 0;
 }
+@media screen and (max-width: 768px) {
+  .footer-bg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 </style>

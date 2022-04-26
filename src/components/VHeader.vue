@@ -98,4 +98,17 @@ export default {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .header_wrapper_white_up {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header_wrapper_white_down {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 </style>
