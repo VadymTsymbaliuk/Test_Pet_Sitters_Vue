@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <hr />
-
     <section class="bg_slider">
       <div class="container">
         <div class="wrapper_slider_form">
@@ -27,7 +26,53 @@
       </div>
     </section>
   </div>
-  <section class="mt-4 mb-4">
+  <section class="petsitter_partners_wrapper">
+    <div class="mb-4 d-flex justify-content-center">
+      <div class="justify-content-center border_pp_wrapper"></div>
+      <div class="mb-3 text-center">
+        <h3>Pet Sitting Jobs</h3>
+        <span>Main Features</span>
+      </div>
+      <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <card />
+          <card />
+          <card />
+          <card />
+          <card />
+          <card />
+        </div>
+        <div class="col">
+          <div class="featured-jobs_container position-relative">
+            <div>
+              <img src="../../public/img/sec-3_row-2_img.png" alt="img" />
+            </div>
+            <div class="featured-jobs_user">
+              <h3>Lincey horton</h3>
+              <p>looking for a dog walker</p>
+              <div class="jobs-category_container">
+                <p>Dog walker</p>
+                <p>Denver US</p>
+                <p>Posted 4 years ago</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Need a pet sitter?</h3>
+            <p>Interdum et malesuada fames ac ante venenatis ipsum non.</p>
+            <button class="btn">Post a job</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card_btm_wrapper">
+      <button>load more listings</button>
+    </div>
+  </section>
+  <section class="py-4">
     <div class="d-flex justify-content-center">
       <div class="justify-content-center border_pp_wrapper"></div>
       <div class="text-center">
@@ -59,25 +104,6 @@
       </div>
     </div>
   </section>
-  <section class="petsitter_partners_wrapper">
-    <div class="mb-4 d-flex justify-content-center">
-      <div class="justify-content-center border_pp_wrapper"></div>
-      <div class="mb-3 text-center">
-        <h3>Pet Sitting Jobs</h3>
-        <span>Main Features</span>
-      </div>
-      <div class="align-content-center border_pp_wrapper"></div>
-    </div>
-    <div class="container">
-      <card />
-      <card />
-      <card />
-      <card />
-    </div>
-    <div class="card_btm_wrapper">
-      <button>load more listings</button>
-    </div>
-  </section>
   <hr />
   <div
     class="wrapper_support bg_support_2 d-flex align-content-center justify-content-center"
@@ -105,33 +131,6 @@
     </div>
     <div class="card_btm_wrapper">
       <button>load more Resume</button>
-    </div>
-  </section>
-  <section class="mt-4 mb-4 container">
-    <div class="d-flex justify-content-center">
-      <div class="justify-content-center border_pp_wrapper"></div>
-      <div class="text-center">
-        <h3 class="ml-5 mr-5">OUR PARTNERS</h3>
-      </div>
-      <div class="align-content-center border_pp_wrapper"></div>
-    </div>
-    <div class="row text-center">
-      <div class="col">
-        <div>tresdiohg</div>
-        <div>tresdiohg</div>
-      </div>
-      <div class="col">
-        <div>tresdiohg</div>
-        <div>tresdiohg</div>
-      </div>
-      <div class="col">
-        <div>tresdiohg</div>
-        <div>tresdiohg</div>
-      </div>
-      <div class="col">
-        <div>tresdiohg</div>
-        <div>tresdiohg</div>
-      </div>
     </div>
   </section>
   <div
@@ -169,6 +168,7 @@
   justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
+
   button {
     color: #ffffff;
     background: #39b3ce;
@@ -239,6 +239,61 @@
   border: none;
   padding: 5px;
 }
+.featured-jobs_container {
+  position: relative;
+  max-width: 350px;
+}
+.featured-jobs_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(104, 104, 104, 0.67);
+  padding: 14px 17px;
+  color: #fff;
+  h3 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+  }
+  p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+  }
+  .jobs-category_container {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 8px;
+      line-height: 11px;
+      position: relative;
+    }
+    p:before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      left: -13px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+    p:nth-child(1):before {
+      background-image: url("../../public/img/icons/sec-3_row-2_icon-1.svg");
+    }
+    p:nth-child(2):before {
+      background-image: url("../../public/img/icons/sec-3_row-2_icon-2.svg");
+    }
+    p:nth-child(3):before {
+      background-image: url("../../public/img/icons/sec-3_row-2_icon-3.svg");
+    }
+  }
+}
 
 .wrapper_support {
   button {
@@ -264,6 +319,7 @@
 .bg_support_2 {
   background-image: url("../../public/img/bg_suport_2.png");
 }
+
 @media screen and (max-width: 768px) {
   .bg_slider {
     background-size: cover;
@@ -279,7 +335,7 @@ import VSlider from "@/components/VSlider";
 import Card from "@/components/Card";
 
 export default {
-  name: "HomeView",
+  name: "HomeSecond",
   components: { VSlider, Card },
 };
 </script>
