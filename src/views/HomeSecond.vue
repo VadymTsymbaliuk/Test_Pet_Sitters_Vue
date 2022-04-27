@@ -29,7 +29,7 @@
   <section class="petsitter_partners_wrapper">
     <div class="mb-4 d-flex justify-content-center">
       <div class="justify-content-center border_pp_wrapper"></div>
-      <div class="mb-3 text-center">
+      <div class="mb-3 section-header_container text-center">
         <h3>Pet Sitting Jobs</h3>
         <span>Main Features</span>
       </div>
@@ -37,7 +37,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-8">
           <card />
           <card />
           <card />
@@ -52,7 +52,7 @@
             </div>
             <div class="featured-jobs_user">
               <h3>Lincey horton</h3>
-              <p>looking for a dog walker</p>
+              <p class="mb-4">Looking for a dog walker</p>
               <div class="jobs-category_container">
                 <p>Dog walker</p>
                 <p>Denver US</p>
@@ -77,8 +77,68 @@
   <section class="py-4">
     <div class="d-flex justify-content-center">
       <div class="justify-content-center border_pp_wrapper"></div>
-      <div class="text-center">
-        <h3>PETSITTER IN NUMBERS</h3>
+      <div class="section-header_container text-center">
+        <h3>Why choose us</h3>
+        <span>Main features</span>
+      </div>
+      <div class="align-content-center border_pp_wrapper"></div>
+    </div>
+    <div class="features-container d-flex justify-content-around">
+      <div class="features-item d-flex flex-column text-center mt-4 mb-4">
+        <div class="features-item_icon">
+          <img
+            src="../../public/img/icons/home-second/sec-3_icon-1.svg"
+            alt="list"
+          />
+        </div>
+        <h4>Create an account</h4>
+        <p>
+          Make your account better, go there every day to see all the offers.
+        </p>
+      </div>
+      <div class="features-item d-flex flex-column text-center mt-4 mb-4">
+        <div class="features-item_icon">
+          <img
+            src="../../public/img/icons/home-second/sec-3_icon-2.svg"
+            alt="list"
+          />
+        </div>
+        <h4>Sumbit your job/profile</h4>
+        <p>
+          Make your account better, go there every day to see all the offers.
+        </p>
+      </div>
+      <div class="features-item d-flex flex-column text-center mt-4 mb-4">
+        <div class="features-item_icon">
+          <img
+            src="../../public/img/icons/home-second/sec-3_icon-3.svg"
+            alt="list"
+          />
+        </div>
+        <h4>contact pet sitter/job owner</h4>
+        <p>
+          Make your account better, go there every day to see all the offers.
+        </p>
+      </div>
+      <div class="features-item d-flex flex-column text-center mt-4 mb-4">
+        <div class="features-item_icon">
+          <img
+            src="../../public/img/icons/home-second/sec-3_icon-4.svg"
+            alt="list"
+          />
+        </div>
+        <h4>Become a star</h4>
+        <p>
+          Make your account better, go there every day to see all the offers.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="py-4">
+    <div class="d-flex justify-content-center">
+      <div class="justify-content-center border_pp_wrapper"></div>
+      <div class="section-header_container text-center">
+        <h3>petsitter stats</h3>
         <span>Site Stats</span>
       </div>
       <div class="align-content-center border_pp_wrapper"></div>
@@ -106,33 +166,61 @@
       </div>
     </div>
   </section>
-  <hr />
-  <div
-    class="wrapper_support bg_support_2 d-flex align-content-center justify-content-center"
-  >
-    <div class="align-content-center justify-content-center">
-      <h3>best professional care?</h3>
-      <p>iinterdum et malesuada fames ac ante venenatis ipsum non.</p>
-      <button>read more</button>
-    </div>
-  </div>
-  <section class="petsitter_partners_wrapper">
-    <div class="mb-4 d-flex justify-content-center">
+  <section class="py-4">
+    <div class="d-flex justify-content-center">
       <div class="justify-content-center border_pp_wrapper"></div>
-      <div class="mb-3 text-center">
-        <h3>ALL PET SITTERS</h3>
-        <span>Main Features</span>
+      <div class="section-header_container text-center">
+        <h3>what clients say</h3>
+        <span>recent reviews</span>
       </div>
       <div class="align-content-center border_pp_wrapper"></div>
     </div>
-    <div class="container">
-      <card />
-      <card />
-      <card />
-      <card />
-    </div>
-    <div class="card_btm_wrapper">
-      <button>load more Resume</button>
+    <div class="clients-comment_container">
+      <div class="comment_item">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              lorem ipsum dolor sit amet, consectetur elit. donec ut looreat mi.
+              integer vitae elit leo eiusimood. nullam blandit lectus sed
+              sollicitudin.
+            </p>
+          </div>
+          <div class="card-footer">
+            <h4>john doe</h4>
+            <p>Ceo, company name</p>
+          </div>
+        </div>
+      </div>
+      <div class="comment_item">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              lorem ipsum dolor sit amet, consectetur elit. donec ut looreat mi.
+              integer vitae elit leo eiusimood. nullam blandit lectus sed
+              sollicitudin.
+            </p>
+          </div>
+          <div class="card-footer">
+            <h4>john doe</h4>
+            <p>Ceo, company name</p>
+          </div>
+        </div>
+      </div>
+      <div class="comment_item">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              lorem ipsum dolor sit amet, consectetur elit. donec ut looreat mi.
+              integer vitae elit leo eiusimood. nullam blandit lectus sed
+              sollicitudin.
+            </p>
+          </div>
+          <div class="card-footer">
+            <h4>john doe</h4>
+            <p>Ceo, company name</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <div
@@ -181,8 +269,99 @@
 }
 
 .petsitter_partners_wrapper {
-  background: #f3f5eb;
+  //background: #f3f5eb;
   padding-top: 30px;
+}
+
+.features-item {
+  max-width: 230px;
+
+  .features-item_icon {
+    border-radius: 50%;
+    background-color: #a6ce39;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 21px;
+
+    img {
+      align-self: center;
+      max-width: 45px;
+    }
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: capitalize;
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
+
+.clients-comment_container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  .comment_item {
+    position: relative;
+
+    .card {
+      max-width: 210px;
+
+      .card-body {
+        p {
+          font-size: 11px;
+          line-height: 15px;
+          color: #454545;
+        }
+      }
+
+      .card-footer {
+        background-color: #c4c4c4;
+
+        h4 {
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 14px;
+          text-transform: capitalize;
+        }
+
+        p {
+          margin: 0;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 9px;
+          line-height: 12px;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .comment_item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+  }
 }
 
 .wrapper_icon {
@@ -228,6 +407,34 @@
   }
 }
 
+main {
+  section {
+    .section-header_container {
+      h3 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 29px;
+        color: #000000;
+        text-transform: capitalize;
+      }
+      span {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  section:nth-child(even) {
+    background-color: #fff;
+  }
+
+  section:nth-child(odd) {
+    background-color: #f3f5eb;
+  }
+}
+
 .icon_number {
   font-size: 25px;
   font-weight: 700;
@@ -241,10 +448,12 @@
   border: none;
   padding: 5px;
 }
+
 .featured-jobs_container {
   position: relative;
   max-width: 350px;
 }
+
 .featured-jobs_user {
   display: flex;
   flex-direction: column;
@@ -255,26 +464,31 @@
   background-color: rgba(104, 104, 104, 0.67);
   padding: 14px 17px;
   color: #fff;
+
   h3 {
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.05em;
   }
+
   p {
     margin: 0;
     font-size: 10px;
     line-height: 14px;
     letter-spacing: 0.05em;
   }
+
   .jobs-category_container {
     display: flex;
     justify-content: space-between;
+
     p {
       font-size: 8px;
       line-height: 11px;
       position: relative;
     }
+
     p:before {
       position: absolute;
       content: "";
@@ -285,19 +499,54 @@
       background-position: center center;
       background-size: contain;
     }
+
     p:nth-child(1):before {
-      background-image: url("../../public/img/icons/sec-3_row-2_icon-1.svg");
+      background-image: url("../../public/img/icons/home-second/sec-2_row-2_icon-1.svg");
     }
+
     p:nth-child(2):before {
-      background-image: url("../../public/img/icons/sec-3_row-2_icon-2.svg");
+      background-image: url("../../public/img/icons/home-second/sec-2_row-2_icon-2.svg");
     }
+
     p:nth-child(3):before {
-      background-image: url("../../public/img/icons/sec-3_row-2_icon-3.svg");
+      background-image: url("../../public/img/icons/home-second/sec-2_row-2_icon-3.svg");
     }
   }
 }
+
 .job-request_container {
   max-width: 350px;
+  height: 40%;
+  max-height: 295px;
+  background-color: #ececec;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 50px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+  h3 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  button {
+    color: #ffffff;
+    background: #39b3ce;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 50px;
+  }
 }
 
 .wrapper_support {
