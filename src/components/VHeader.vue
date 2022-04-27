@@ -42,7 +42,7 @@
       <router-link to="/">HOME</router-link>
       <router-link to="/home-second">HOME-SECOND</router-link>
       <a href="#">SHORTCODES</a>
-      <a href="#">JOBS</a>
+      <router-link to="/jobs">JOBS</router-link>
       <a href="#">SITTERS</a>
       <a href="#">BLOG</a>
       <a href="#">PORTFOLIO</a>
