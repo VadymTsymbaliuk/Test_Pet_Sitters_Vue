@@ -37,7 +37,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-xl-8 mb-3 mb-xl-0">
           <card />
           <card />
           <card />
@@ -45,7 +45,9 @@
           <card />
           <card />
         </div>
-        <div class="col d-flex flex-column justify-content-between">
+        <div
+          class="col d-flex flex-column justify-content-between align-items-center"
+        >
           <div class="featured-jobs_container position-relative">
             <div>
               <img src="../../public/img/sec-3_row-2_img.png" alt="img" />
@@ -550,12 +552,29 @@ main {
 }
 
 .wrapper_support {
+  .align-content-center {
+    z-index: 1;
+  }
   button {
     border: none;
     background: #39b3ce;
     color: #f3f5eb;
     border-radius: 10px;
     padding: 5px 45px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
   }
 
   color: #f3f5eb;
@@ -564,6 +583,16 @@ main {
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.wrapper_support:before {
+  content: "";
+  height: 40%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  background-color: #a6ce39;
 }
 
 .bg_support {
