@@ -57,7 +57,7 @@
       </div>
     </nav>
     <div class="header_wrapper_black">
-      <a href="#">HOME</a>
+      <a href="/">HOME</a>
       <a href="#">PAGES</a>
       <a href="#">SHORTCODES</a>
       <a href="#">JOBS</a>

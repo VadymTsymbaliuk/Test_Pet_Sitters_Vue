@@ -129,5 +129,13 @@ footer a {
     display: flex;
     flex-wrap: wrap;
   }
+  .footer_bottom {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form_email {
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>

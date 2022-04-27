@@ -98,6 +98,7 @@
       <div class="align-content-center border_pp_wrapper"></div>
     </div>
     <div class="container">
+      <FormSearch />
       <card />
       <card />
       <card />
@@ -169,6 +170,7 @@
   justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
+
   button {
     color: #ffffff;
     background: #39b3ce;
@@ -264,6 +266,7 @@
 .bg_support_2 {
   background-image: url("../../public/img/bg_suport_2.png");
 }
+
 @media screen and (max-width: 768px) {
   .bg_slider {
     background-size: cover;
@@ -277,9 +280,10 @@
 <script>
 import VSlider from "@/components/VSlider";
 import Card from "@/components/Card";
+import FormSearch from "@/components/FormSearch";
 
 export default {
   name: "HomeView",
-  components: { VSlider, Card },
+  components: { VSlider, Card, FormSearch },
 };
 </script>
