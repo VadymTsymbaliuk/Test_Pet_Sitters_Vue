@@ -29,24 +29,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#">FAQS</a>
           </li>
-          <!--          <li class="nav-item dropdown">-->
-          <!--            <a-->
-          <!--              class="nav-link dropdown-toggle"-->
-          <!--              href="#"-->
-          <!--              id="navbarDropdown"-->
-          <!--              role="button"-->
-          <!--              data-toggle="dropdown"-->
-          <!--              aria-expanded="false"-->
-          <!--            >-->
-          <!--              MENU-->
-          <!--            </a>-->
-          <!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-          <!--              <a class="dropdown-item" href="#">Action</a>-->
-          <!--              <a class="dropdown-item" href="#">Another action</a>-->
-          <!--              <div class="dropdown-divider"></div>-->
-          <!--              <a class="dropdown-item" href="#">Something else here</a>-->
-          <!--            </div>-->
-          <!--          </li>-->
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <div class="header_wrapper_black_right">
@@ -57,8 +39,8 @@
       </div>
     </nav>
     <div class="header_wrapper_black">
-      <a href="/">HOME</a>
-      <a href="#">PAGES</a>
+      <router-link to="/">HOME</router-link>
+      <router-link to="/home-second">HOME-SECOND</router-link>
       <a href="#">SHORTCODES</a>
       <a href="#">JOBS</a>
       <a href="#">SITTERS</a>
