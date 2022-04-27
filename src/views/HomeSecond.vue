@@ -45,7 +45,7 @@
           <card />
           <card />
         </div>
-        <div class="col">
+        <div class="col d-flex flex-column justify-content-between">
           <div class="featured-jobs_container position-relative">
             <div>
               <img src="../../public/img/sec-3_row-2_img.png" alt="img" />
@@ -60,10 +60,12 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="job-request_container">
             <h3>Need a pet sitter?</h3>
             <p>Interdum et malesuada fames ac ante venenatis ipsum non.</p>
-            <button class="btn">Post a job</button>
+            <div>
+              <button class="btn">Post a job</button>
+            </div>
           </div>
         </div>
       </div>
@@ -293,6 +295,9 @@
       background-image: url("../../public/img/icons/sec-3_row-2_icon-3.svg");
     }
   }
+}
+.job-request_container {
+  max-width: 350px;
 }
 
 .wrapper_support {
