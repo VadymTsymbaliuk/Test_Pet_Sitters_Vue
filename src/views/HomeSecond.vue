@@ -18,9 +18,9 @@
             <button>Search</button>
           </div>
           <v-slider>
-            <div><img src="../../public/img/slide.png" alt="" /></div>
-            <div><img src="../../public/img/slide.png" alt="" /></div>
-            <div><img src="../../public/img/slide.png" alt="" /></div>
+            <div><img src="../assets/img/slide.png" alt="" /></div>
+            <div><img src="../assets/img/slide.png" alt="" /></div>
+            <div><img src="../assets/img/slide.png" alt="" /></div>
           </v-slider>
         </div>
       </div>
@@ -50,7 +50,7 @@
         >
           <div class="featured-jobs_container position-relative">
             <div>
-              <img src="../../public/img/sec-3_row-2_img.png" alt="img" />
+              <img src="../assets/img/sec-3_row-2_img.png" alt="img" />
             </div>
             <div class="featured-jobs_user">
               <h3>Lincey horton</h3>
@@ -89,7 +89,7 @@
       <div class="features-item d-flex flex-column text-center mt-4 mb-4">
         <div class="features-item_icon">
           <img
-            src="../../public/img/icons/home-second/sec-3_icon-1.svg"
+            src="../assets/img/icons/home-second/sec-3_icon-1.svg"
             alt="list"
           />
         </div>
@@ -101,7 +101,7 @@
       <div class="features-item d-flex flex-column text-center mt-4 mb-4">
         <div class="features-item_icon">
           <img
-            src="../../public/img/icons/home-second/sec-3_icon-2.svg"
+            src="../assets/img/icons/home-second/sec-3_icon-2.svg"
             alt="list"
           />
         </div>
@@ -113,7 +113,7 @@
       <div class="features-item d-flex flex-column text-center mt-4 mb-4">
         <div class="features-item_icon">
           <img
-            src="../../public/img/icons/home-second/sec-3_icon-3.svg"
+            src="../assets/img/icons/home-second/sec-3_icon-3.svg"
             alt="list"
           />
         </div>
@@ -125,7 +125,7 @@
       <div class="features-item d-flex flex-column text-center mt-4 mb-4">
         <div class="features-item_icon">
           <img
-            src="../../public/img/icons/home-second/sec-3_icon-4.svg"
+            src="../assets/img/icons/home-second/sec-3_icon-4.svg"
             alt="list"
           />
         </div>
@@ -147,22 +147,22 @@
     </div>
     <div class="d-flex justify-content-around">
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/pawprint_icon.png" alt="" />
+        <img src="../assets/img/pawprint_icon.png" alt="" />
         <span class="icon_number">8</span>
         <span>All Jobs</span>
       </div>
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/checked_icon.png" alt="" />
+        <img src="../assets/img/checked_icon.png" alt="" />
         <span class="icon_number">0</span>
         <span>Jobs Filled</span>
       </div>
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/user_icon.png" alt="" />
+        <img src="../assets/img/user_icon.png" alt="" />
         <span class="icon_number">8</span>
         <span>Pet Sitters</span>
       </div>
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/users_icon.png" alt="" />
+        <img src="../assets/img/users_icon.png" alt="" />
         <span class="icon_number">231</span>
         <span>Users</span>
       </div>
@@ -237,7 +237,7 @@
 </template>
 <style scoped lang="scss">
 .bg_slider {
-  background-image: url("../../public/img/bg_slider.png");
+  background-image: url("../assets/img/bg_slider.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -503,15 +503,15 @@ main {
     }
 
     p:nth-child(1):before {
-      background-image: url("../../public/img/icons/home-second/sec-2_row-2_icon-1.svg");
+      background-image: url("../assets/img/icons/home-second/sec-2_row-2_icon-1.svg");
     }
 
     p:nth-child(2):before {
-      background-image: url("../../public/img/icons/home-second/sec-2_row-2_icon-2.svg");
+      background-image: url("../assets/img/icons/home-second/sec-2_row-2_icon-2.svg");
     }
 
     p:nth-child(3):before {
-      background-image: url("../../public/img/icons/home-second/sec-2_row-2_icon-3.svg");
+      background-image: url("../assets/img/icons/home-second/sec-2_row-2_icon-3.svg");
     }
   }
 }
@@ -596,11 +596,11 @@ main {
 }
 
 .bg_support {
-  background-image: url("../../public/img/bg_suport_2.png");
+  background-image: url("../assets/img/bg_suport_2.png");
 }
 
 .bg_support_2 {
-  background-image: url("../../public/img/bg_suport_2.png");
+  background-image: url("../assets/img/bg_suport_2.png");
 }
 
 @media screen and (max-width: 768px) {

@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="d-flex align-self-center navbar-brand" href="#"
-        ><img src="../../public/img/pet_sitter_logo.png" alt="" />
+        ><img src="../assets/img/pet_sitter_logo.png" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -43,7 +43,7 @@
       <router-link to="/home-second">HOME-SECOND</router-link>
       <a href="#">SHORTCODES</a>
       <router-link to="/jobs">JOBS</router-link>
-      <a href="#">SITTERS</a>
+      <router-link to="/sitters-list">SITTERS</router-link>
       <a href="#">BLOG</a>
       <a href="#">PORTFOLIO</a>
       <a href="#">CONTACTS</a>

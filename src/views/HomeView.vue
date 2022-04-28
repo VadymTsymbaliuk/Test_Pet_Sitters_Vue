@@ -19,9 +19,9 @@
             <button>Search</button>
           </div>
           <v-slider>
-            <div><img src="../../public/img/slide.png" alt="" /></div>
-            <div><img src="../../public/img/slide.png" alt="" /></div>
-            <div><img src="../../public/img/slide.png" alt="" /></div>
+            <div><img src="../assets/img/slide.png" alt="" /></div>
+            <div><img src="../assets/img/slide.png" alt="" /></div>
+            <div><img src="../assets/img/slide.png" alt="" /></div>
           </v-slider>
         </div>
       </div>
@@ -38,22 +38,22 @@
     </div>
     <div class="d-flex justify-content-around">
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/pawprint_icon.png" alt="" />
+        <img src="../assets/img/pawprint_icon.png" alt="" />
         <span class="icon_number">8</span>
         <span>All Jobs</span>
       </div>
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/checked_icon.png" alt="" />
+        <img src="../assets/img/checked_icon.png" alt="" />
         <span class="icon_number">0</span>
         <span>Jobs Filled</span>
       </div>
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/user_icon.png" alt="" />
+        <img src="../assets/img/user_icon.png" alt="" />
         <span class="icon_number">8</span>
         <span>Pet Sitters</span>
       </div>
       <div class="wrapper_icon d-flex flex-column text-center mt-4 mb-4">
-        <img src="../../public/img/users_icon.png" alt="" />
+        <img src="../assets/img/users_icon.png" alt="" />
         <span class="icon_number">231</span>
         <span>Users</span>
       </div>
@@ -147,7 +147,7 @@
 </template>
 <style scoped lang="scss">
 .bg_slider {
-  background-image: url("../../public/img/bg_slider.png");
+  background-image: url("../assets/img/bg_slider.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -260,11 +260,11 @@
 }
 
 .bg_support {
-  background-image: url("../../public/img/bg_suport_2.png");
+  background-image: url("../assets/img/bg_suport_2.png");
 }
 
 .bg_support_2 {
-  background-image: url("../../public/img/bg_suport_2.png");
+  background-image: url("../assets/img/bg_suport_2.png");
 }
 
 @media screen and (max-width: 768px) {
