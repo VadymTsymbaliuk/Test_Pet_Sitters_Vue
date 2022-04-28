@@ -109,7 +109,18 @@
     </div>
   </section>
   <section class="container">
-    <OvnerGridIteam />
+    <div class="row">
+      <div class="col-6">
+        <OvnerGridIteam />
+        <OvnerGridIteam />
+        <OvnerGridIteam />
+      </div>
+      <div class="col-6">
+        <OvnerGridIteam />
+        <OvnerGridIteam />
+        <OvnerGridIteam />
+      </div>
+    </div>
   </section>
   <section class="mt-4 mb-4 container">
     <div class="d-flex justify-content-center">
