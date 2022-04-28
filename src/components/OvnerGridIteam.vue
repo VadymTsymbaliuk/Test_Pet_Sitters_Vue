@@ -2,14 +2,14 @@
   <div class="card_wrapper">
     <div class="card_wrapper_img_info d-flex">
       <div class="info_img">
-        <img src="../../public/img/cat_ovner.png" />
+        <img src="../assets/img/cat.png" />
       </div>
       <div class="pl-3 d-flex flex-column">
         <h2>cat sister needed</h2>
         <span>cryctal millan</span>
         <span>looking for a dog walker</span>
         <div>
-          <img src="../../public/img/map_point.png" />
+          <img src="../assets/img/map_point.png" />
           berlin
         </div>
       </div>
