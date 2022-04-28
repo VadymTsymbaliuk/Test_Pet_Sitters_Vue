@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    <BreadCrumb :crumbs="crumbs" />
     <section class="section section-1">
       <FormSearch />
     </section>
@@ -77,13 +78,36 @@
 <script>
 import SitterCard from "@/components/SitterCard";
 import FormSearch from "@/components/FormSearch";
+import BreadCrumb from "@/components/BreadCrumb";
 export default {
   name: "SittersList",
-  components: { FormSearch, SitterCard },
+  components: { BreadCrumb, FormSearch, SitterCard },
+  data: function () {
+    return {
+      crumbs: [
+        {
+          title: "Home",
+          path: "",
+        },
+        {
+          title: "Sitter list",
+          path: "sitters-list",
+        },
+      ],
+    };
+  },
+  methods: {
+    selected(crumb) {
+      console.log(crumb);
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
+.container-fluid {
+  padding: 0;
+}
 .section {
   padding-top: 100px;
 }
