@@ -38,4 +38,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.breadcrumb {
+  background-image: url("../assets/img/breadcrumb_bg.png");
+  justify-content: end;
+  .btn-link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
+</style>
