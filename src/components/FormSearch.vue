@@ -4,21 +4,11 @@
       <div class="form-group mb-2"></div>
       <div class="form-group mx-sm-3 mb-2">
         <label for="inputPassword2" class="sr-only">Keywords</label>
-        <input
-          type="password"
-          class="form-control"
-          id="inputPassword2"
-          placeholder="Keywords"
-        />
+        <input class="form-control" placeholder="Keywords" />
       </div>
       <div class="form-group mx-sm-3 mb-2">
         <label for="inputPassword2" class="sr-only">Any Location</label>
-        <input
-          type="password"
-          class="form-control"
-          id="inputPassword2"
-          placeholder="Any Location"
-        />
+        <input class="form-control" placeholder="Any Location" />
       </div>
       <select
         class="custom-select mx-sm-3 mb-2"
