@@ -4,6 +4,7 @@ import HomeSecond from "@/views/HomeSecond";
 import VJobs from "@/views/VJobs";
 import SittersList from "@/views/SittersList";
 import RegisterView from "@/views/RegisterView";
+import LoginView from "@/views/LoginView";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/register-login",
     name: "RegisterView",
     component: RegisterView,
+  },
+  {
+    path: "/register",
+    name: "LoginView",
+    component: LoginView,
   },
   // {
   //   path: "/about",

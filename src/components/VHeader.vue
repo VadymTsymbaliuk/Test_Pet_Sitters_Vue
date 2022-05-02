@@ -33,7 +33,7 @@
         <form class="form-inline my-2 my-lg-0">
           <div class="header_wrapper_black_right">
             <router-link to="/register-login">REGISTER</router-link>
-            <a href=""><span class="icon-icons8-youtube"></span> LOGIN</a>
+            <router-link to="/register">LOGIN</router-link>
           </div>
         </form>
       </div>
@@ -103,6 +103,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 @media screen and (max-width: 768px) {
   .header_wrapper_white_up {
     text-align: center;
