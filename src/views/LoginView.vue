@@ -29,11 +29,11 @@
           <input placeholder="Countries" type="text" />
           <input placeholder="City" type="text" />
           <button>Sing Up</button>
-          <div class="">
+          <div class="wrapper_text_info">
             <span class="text_info"
-              >By cREATing AN ACCOUNT, you agree to pet sitter terms of service
-              and </span
-            ><a class="privacy_policy">privacy policy</a>
+              >By creating an account, you agree to pet sitter </span
+            ><a class="privacy_policy" href="">Terms Of Service</a>and
+            <a class="privacy_policy">Privacy Policy</a>
           </div>
         </div>
       </div>
@@ -77,6 +77,11 @@ export default {
   }
 }
 
+.wrapper_text_info {
+  margin: 20px 0;
+  font-size: 11px;
+}
+
 a.bg_a {
   background: #367cbd;
   color: #ffffff;
@@ -93,7 +98,7 @@ a.privacy_policy {
   color: #ce5d39;
   cursor: pointer;
   font-size: 11px;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
 .bg_support_2 {
@@ -117,8 +122,12 @@ a.privacy_policy {
     padding: 20px 0;
     flex-direction: column;
 
+    input {
+      width: 250px;
+    }
+
     span {
-      color: #ffffff;
+      color: #000000;
     }
 
     a {
@@ -127,6 +136,14 @@ a.privacy_policy {
       border-radius: 10px;
       color: #000000;
     }
+  }
+  a.privacy_policy {
+    background: none;
+    border-radius: 0;
+    color: #ce5d39;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 0 10px;
   }
 }
 </style>
