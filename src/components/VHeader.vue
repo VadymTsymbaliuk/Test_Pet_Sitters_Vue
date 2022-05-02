@@ -32,8 +32,8 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <div class="header_wrapper_black_right">
-            <router-link to="/register-login">REGISTER</router-link>
-            <router-link to="/register">LOGIN</router-link>
+            <router-link class="mr-3" to="/register-login">LOGIN</router-link>
+            <router-link class="mr-3" to="/register">REGISTER</router-link>
           </div>
         </form>
       </div>
