@@ -5,6 +5,7 @@ import VJobs from "@/views/VJobs";
 import SittersList from "@/views/SittersList";
 import RegisterView from "@/views/RegisterView";
 import LoginView from "@/views/LoginView";
+import AllJobs from "@/views/AllJobs";
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     path: "/jobs",
     name: "VJobs",
     component: VJobs,
+  },
+  {
+    path: "/all-jobs",
+    name: "AllJobs",
+    component: AllJobs,
   },
   {
     path: "/sitters-list",

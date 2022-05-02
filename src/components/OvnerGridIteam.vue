@@ -1,5 +1,5 @@
 <template>
-  <div class="card_wrapper ml-4">
+  <div class="card_wrapper">
     <div class="card_wrapper_img_info d-flex">
       <div class="info_img">
         <img src="../assets/img/cat.png" />
@@ -16,7 +16,7 @@
     </div>
     <div>
       <div>Cat Sitter</div>
-      <div>Cat Sitter</div>
+      <div>Posted 4 Years Ago</div>
     </div>
   </div>
 </template>

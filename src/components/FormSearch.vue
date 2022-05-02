@@ -58,6 +58,35 @@
       </button>
     </form>
   </div>
+  <div class="wrapper_check_box d-flex justify-content-around">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1"> Cat Sitter </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1"> Dog Sitter </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1">Other Sitter </label>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -71,13 +100,20 @@ export default {
   background: #c4c4c4;
   padding: 50px;
 }
+
 .form-inline {
   justify-content: center;
 }
+
 .btn_Search {
   background: #39b3ce;
   border-radius: 10px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.wrapper_check_box {
+  background: #f3f5eb;
+  padding: 40px 20px;
 }
 </style>

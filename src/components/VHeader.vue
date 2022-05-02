@@ -41,7 +41,7 @@
     <div class="header_wrapper_black">
       <router-link to="/">HOME</router-link>
       <router-link to="/home-second">HOME-SECOND</router-link>
-      <a href="#">SHORTCODES</a>
+      <router-link to="/all-jobs">ALL JOBS</router-link>
       <router-link to="/jobs">JOBS</router-link>
       <router-link to="/sitters-list">SITTERS</router-link>
       <a href="#">BLOG</a>

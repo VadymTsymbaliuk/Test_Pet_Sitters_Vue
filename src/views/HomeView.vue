@@ -108,20 +108,6 @@
       <button>load more Resume</button>
     </div>
   </section>
-  <section class="container">
-    <div class="row">
-      <div class="col-6">
-        <OvnerGridIteam />
-        <OvnerGridIteam />
-        <OvnerGridIteam />
-      </div>
-      <div class="col-6">
-        <OvnerGridIteam />
-        <OvnerGridIteam />
-        <OvnerGridIteam />
-      </div>
-    </div>
-  </section>
   <section class="mt-4 mb-4 container">
     <div class="d-flex justify-content-center">
       <div class="justify-content-center border_pp_wrapper"></div>
@@ -295,10 +281,9 @@
 import VSlider from "@/components/VSlider";
 import Card from "@/components/Card";
 import FormSearch from "@/components/FormSearch";
-import OvnerGridIteam from "@/components/OvnerGridIteam";
 
 export default {
   name: "HomeView",
-  components: { VSlider, Card, FormSearch, OvnerGridIteam },
+  components: { VSlider, Card, FormSearch },
 };
 </script>
