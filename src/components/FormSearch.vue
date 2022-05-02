@@ -73,18 +73,18 @@
         class="form-check-input"
         type="checkbox"
         value=""
-        id="defaultCheck1"
+        id="defaultCheck2"
       />
-      <label class="form-check-label" for="defaultCheck1"> Dog Sitter </label>
+      <label class="form-check-label" for="defaultCheck2"> Dog Sitter </label>
     </div>
     <div class="form-check">
       <input
         class="form-check-input"
         type="checkbox"
         value=""
-        id="defaultCheck1"
+        id="defaultCheck3"
       />
-      <label class="form-check-label" for="defaultCheck1">Other Sitter </label>
+      <label class="form-check-label" for="defaultCheck3">Other Sitter </label>
     </div>
   </div>
 </template>

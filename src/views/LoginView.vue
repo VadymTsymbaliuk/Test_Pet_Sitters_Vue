@@ -137,13 +137,5 @@ a.privacy_policy {
       color: #000000;
     }
   }
-  a.privacy_policy {
-    background: none;
-    border-radius: 0;
-    color: #ce5d39;
-    cursor: pointer;
-    font-size: 11px;
-    padding: 0 10px;
-  }
 }
 </style>

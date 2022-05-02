@@ -6,6 +6,7 @@ import SittersList from "@/views/SittersList";
 import RegisterView from "@/views/RegisterView";
 import LoginView from "@/views/LoginView";
 import AllJobs from "@/views/AllJobs";
+import AnimalsCard from "@/views/AnimalsCard";
 
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
     path: "/all-jobs",
     name: "AllJobs",
     component: AllJobs,
+  },
+  {
+    path: "/animals-profile",
+    name: "AnimalsCard",
+    component: AnimalsCard,
   },
   {
     path: "/sitters-list",

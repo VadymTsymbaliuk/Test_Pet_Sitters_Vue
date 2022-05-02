@@ -1,18 +1,20 @@
 <template>
-  <div class="card">
-    <div class="d-flex">
-      <img class="img_border" src="../assets/img/toy_terer.png" alt="a" />
-      <div class="d-flex flex-column justify-content-center pl-2">
-        <div>Dog Dister Needed</div>
-        <p>Brenna Femiano</p>
+  <router-link to="/animals-profile">
+    <div class="card">
+      <div class="d-flex">
+        <img class="img_border" src="../assets/img/toy_terer.png" alt="a" />
+        <div class="d-flex flex-column justify-content-center pl-2">
+          <div>Dog Dister Needed</div>
+          <p>Brenna Femiano</p>
+        </div>
+      </div>
+      <div><img src="../assets/img/map_point.png" alt="" /> New York</div>
+      <div>
+        Pet Sitter
+        <p>posted 4 years ago</p>
       </div>
     </div>
-    <div><img src="../assets/img/map_point.png" alt="" /> New York</div>
-    <div>
-      Pet Sitter
-      <p>posted 4 years ago</p>
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -23,6 +25,9 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 .card {
   display: flex;
   flex-direction: row;
