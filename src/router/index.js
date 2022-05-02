@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import HomeSecond from "@/views/HomeSecond";
 import VJobs from "@/views/VJobs";
 import SittersList from "@/views/SittersList";
+import RegisterView from "@/views/RegisterView";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/sitters-list",
     name: "SittersList",
     component: SittersList,
+  },
+  {
+    path: "/register-login",
+    name: "RegisterView",
+    component: RegisterView,
   },
   // {
   //   path: "/about",

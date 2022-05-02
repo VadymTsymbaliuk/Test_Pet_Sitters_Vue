@@ -32,7 +32,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <div class="header_wrapper_black_right">
-            <a class="pr-2" href=""> REGISTER</a>
+            <router-link to="/register-login">REGISTER</router-link>
             <a href=""><span class="icon-icons8-youtube"></span> LOGIN</a>
           </div>
         </form>
