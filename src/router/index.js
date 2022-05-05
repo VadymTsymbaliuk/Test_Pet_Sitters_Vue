@@ -8,6 +8,7 @@ import LoginView from "@/views/LoginView";
 import AllJobs from "@/views/AllJobs";
 import AnimalsCard from "@/views/AnimalsCard";
 import DogWalkerPage from "@/views/DogWalkerPage";
+import FeaturedPetSitters from "@/views/FeaturedPetSitters";
 
 const routes = [
   {
@@ -39,6 +40,11 @@ const routes = [
     path: "/sitters-list",
     name: "SittersList",
     component: SittersList,
+  },
+  {
+    path: "/featured-pet-sitters",
+    name: "FeaturedPetSitters",
+    component: FeaturedPetSitters,
   },
   {
     path: "/register-login",

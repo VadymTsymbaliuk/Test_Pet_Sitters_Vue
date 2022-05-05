@@ -44,7 +44,7 @@
       <router-link to="/all-jobs">ALL JOBS</router-link>
       <router-link to="/jobs">JOBS</router-link>
       <router-link to="/sitters-list">SITTERS</router-link>
-      <a href="#">BLOG</a>
+      <router-link to="/featured-pet-sitters">BLOG</router-link>
       <a href="#">PORTFOLIO</a>
       <a href="#">CONTACTS</a>
     </div>

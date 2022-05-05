@@ -146,14 +146,6 @@
   </div>
 </template>
 <style scoped lang="scss">
-.bg_slider {
-  background-image: url("../assets/img/bg_slider.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 60px 0;
-}
-
 .border_pp_wrapper {
   border-bottom: 1px solid #c4c4c4;
   flex-grow: 1;
