@@ -23,3 +23,10 @@ a{
   color: #020202;
   text-decoration: none;
 }
+.bg_slider {
+  background-image: url("../img/bg_slider.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 60px 0;
+}
