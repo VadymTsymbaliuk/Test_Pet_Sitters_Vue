@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <BreadCrumb :crumbs="crumbs" />
+    <BreadCrumb :crumbs="crumbs" :page-title="pageTitle" />
     <section class="section section-1">
       <FormSearch />
     </section>
@@ -94,6 +94,9 @@ export default {
           path: "sitters-list",
         },
       ],
+      pageTitle: {
+        title: "Title",
+      },
     };
   },
   methods: {
