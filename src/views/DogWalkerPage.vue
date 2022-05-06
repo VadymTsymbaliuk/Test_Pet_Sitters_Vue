@@ -22,31 +22,36 @@
             </div>
           </div>
         </div>
-        <div class="description-container">
-          <h2>Description</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-            animi asperiores atque consectetur debitis dolorum eligendi est et
-            mollitia nam natus nihil obcaecati, praesentium quia quod sed
-            tempore ullam vero.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-            adipisci alias, cumque deserunt dolorem eum explicabo fugit hic
-            magnam nobis quaerat quasi quis, quisquam saepe sapiente tempora
-            velit. Nemo, sed!
-          </p>
+        <div class="row description-container">
+          <div class="col">
+            <h2>Description</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+              animi asperiores atque consectetur debitis dolorum eligendi est et
+              mollitia nam natus nihil obcaecati, praesentium quia quod sed
+              tempore ullam vero.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              adipisci alias, cumque deserunt dolorem eum explicabo fugit hic
+              magnam nobis quaerat quasi quis, quisquam saepe sapiente tempora
+              velit. Nemo, sed!
+            </p>
+          </div>
         </div>
-        <div class="location-container">
-          <v-map class="map" :options="state.map">
-            <MglAttributionControl />
-            <MglNavigationControl position="top-right" />
-            <MglGeolocateControl position="top-right" />
-            <MglNavigationControl position="top-right" />
-            <MglGeolocateControl position="top-right" />
-            <MglScaleControl />
-            <MglFullscreenControl />
-          </v-map>
+        <div class="row location-container">
+          <div class="col">
+            <h2>Location</h2>
+            <v-map class="map" :options="state.map">
+              <MglAttributionControl />
+              <MglNavigationControl position="top-right" />
+              <MglGeolocateControl position="top-right" />
+              <MglNavigationControl position="top-right" />
+              <MglGeolocateControl position="top-right" />
+              <MglScaleControl />
+              <MglFullscreenControl />
+            </v-map>
+          </div>
         </div>
         <div class="sitter-characteristics">
           <div>
@@ -80,120 +85,179 @@
             </ul>
           </div>
         </div>
-        <div class="user-comments">
-          <h2>What people say?</h2>
-          <div class="sort-container">
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Recipient's username"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-              />
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline-secondary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  Button
-                </button>
+        <div class="row user-comments">
+          <div class="col">
+            <h2>What people say?</h2>
+            <div class="sort-container">
+              <div class="select-container">
+                <p>Sort by:</p>
+                <select>
+                  <option value="anyCategory" label selected>
+                    Any category
+                  </option>
+                  <option value="cat">Cat sitter</option>
+                  <option value="dog">Dog sitter</option>
+                  <option value="bird">Bird sitter</option>
+                </select>
               </div>
             </div>
-          </div>
-          <div class="comments-container">
-            <div class="comment-item">
-              <img
-                src="https://img.icons8.com/plasticine/100/000000/user.png"
-              />
-              <div class="d-flex flex-row">
-                <div>
-                  <div class="stars-container">1111</div>
-                  <p>cool</p>
-                  <p>test</p>
-                  <p>june 23, 2022, 12:45 pm</p>
+            <div class="comments-container">
+              <div class="comment-item">
+                <img
+                  src="https://img.icons8.com/plasticine/100/000000/user.png"
+                />
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="stars-container">1111</div>
+                    <p>cool</p>
+                    <p>test</p>
+                    <p>june 23, 2022, 12:45 pm</p>
+                  </div>
+                </div>
+                <div class="rating-container">
+                  <div class="like">
+                    <button class="btn">
+                      <img
+                        src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
+                      />
+                    </button>
+                  </div>
+                  <div class="dislike">
+                    <button class="btn">
+                      <img
+                        src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="rating-container">
-                <div class="like">
-                  <button class="btn">
-                    <img
-                      src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
-                    />
-                  </button>
+              <div class="comment-item">
+                <img
+                  src="https://img.icons8.com/plasticine/100/000000/user.png"
+                />
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="stars-container">1111</div>
+                    <p>cool</p>
+                    <p>test</p>
+                    <p>june 23, 2022, 12:45 pm</p>
+                  </div>
                 </div>
-                <div class="dislike">
-                  <button class="btn">
-                    <img
-                      src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="comment-item">
-              <img
-                src="https://img.icons8.com/plasticine/100/000000/user.png"
-              />
-              <div class="d-flex flex-row">
-                <div>
-                  <div class="stars-container">1111</div>
-                  <p>cool</p>
-                  <p>test</p>
-                  <p>june 23, 2022, 12:45 pm</p>
-                </div>
-              </div>
-              <div class="rating-container">
-                <div class="like">
-                  <button class="btn">
-                    <img
-                      src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
-                    />
-                  </button>
-                </div>
-                <div class="dislike">
-                  <button class="btn">
-                    <img
-                      src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
-                    />
-                  </button>
+                <div class="rating-container">
+                  <div class="like">
+                    <button class="btn">
+                      <img
+                        src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
+                      />
+                    </button>
+                  </div>
+                  <div class="dislike">
+                    <button class="btn">
+                      <img
+                        src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="comment-item">
-              <img
-                src="https://img.icons8.com/plasticine/100/000000/user.png"
-              />
-              <div class="d-flex flex-row">
-                <div>
-                  <div class="stars-container">1111</div>
-                  <p>cool</p>
-                  <p>test</p>
-                  <p>june 23, 2022, 12:45 pm</p>
+              <div class="comment-item">
+                <img
+                  src="https://img.icons8.com/plasticine/100/000000/user.png"
+                />
+                <div class="d-flex flex-row">
+                  <div>
+                    <div class="stars-container">1111</div>
+                    <p>cool</p>
+                    <p>test</p>
+                    <p>june 23, 2022, 12:45 pm</p>
+                  </div>
                 </div>
-              </div>
-              <div class="rating-container">
-                <div class="like">
-                  <button class="btn">
-                    <img
-                      src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
-                    />
-                  </button>
-                </div>
-                <div class="dislike">
-                  <button class="btn">
-                    <img
-                      src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
-                    />
-                  </button>
+                <div class="rating-container">
+                  <div class="like">
+                    <button class="btn">
+                      <img
+                        src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
+                      />
+                    </button>
+                  </div>
+                  <div class="dislike">
+                    <button class="btn">
+                      <img
+                        src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-3"></div>
+      <div class="col-3">
+        <h2>Recent Resumes</h2>
+        <div class="row row-cols-1">
+          <div class="col">
+            <img src="" alt="" />
+            <div>
+              <p>niki belk</p>
+              <p>walk, play and care</p>
+            </div>
+            <div>
+              <p>new york</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="" alt="" />
+            <div>
+              <p>niki belk</p>
+              <p>walk, play and care</p>
+            </div>
+            <div>
+              <p>new york</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="" alt="" />
+            <div>
+              <p>niki belk</p>
+              <p>walk, play and care</p>
+            </div>
+            <div>
+              <p>new york</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="" alt="" />
+            <div>
+              <p>niki belk</p>
+              <p>walk, play and care</p>
+            </div>
+            <div>
+              <p>new york</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="" alt="" />
+            <div>
+              <p>niki belk</p>
+              <p>walk, play and care</p>
+            </div>
+            <div>
+              <p>new york</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="" alt="" />
+            <div>
+              <p>niki belk</p>
+              <p>walk, play and care</p>
+            </div>
+            <div>
+              <p>new york</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -263,13 +327,56 @@ export default {
 @import "~v-mapbox/dist/v-mapbox.css";
 
 .location-container {
-  width: 667px;
-  height: 255px;
+  .map {
+    width: 100%;
+    height: 265px;
+  }
 }
 
-.map {
-  width: 100%;
-  height: 100%;
+.sitter-container,
+.description-container,
+.location-container {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: calc((100vw - 740px) + 100%);
+    height: 100%;
+    background-color: #f3f5eb;
+  }
+}
+.user-comments {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: calc((100vw - 740px) + 100%);
+    height: 100%;
+    background-color: #ececec;
+  }
+  .select-container {
+    display: flex;
+    align-items: center;
+    select {
+      padding: 10px;
+      width: 230px;
+    }
+    p {
+      margin-right: 20px;
+      margin-bottom: 0;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+    }
+  }
 }
 
 .sitter-container {
@@ -285,9 +392,14 @@ export default {
   }
 }
 
+.comments-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .comment-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
