@@ -202,7 +202,11 @@
       <div class="col-4">
         <h2>Recent Resumes</h2>
         <div class="row row-cols-1 resume-container">
-          <div class="col resume-item">
+          <div
+            class="col resume-item"
+            v-for="(id, sitter) of sitters"
+            :key="id"
+          >
             <div class="img-container">
               <img
                 src="../assets/img/sitter_avatar_1.png"
@@ -210,88 +214,88 @@
               />
             </div>
             <div>
-              <p>niki belk</p>
+              <p>{{ sitter }}</p>
               <p>walk, play and care</p>
             </div>
             <div>
-              <p>new york</p>
+              <p>{{ sitter.address[city] }}</p>
             </div>
           </div>
-          <div class="col resume-item">
-            <div class="img-container">
-              <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
-              />
-            </div>
-            <div>
-              <p>niki belk</p>
-              <p>walk, play and care</p>
-            </div>
-            <div>
-              <p>new york</p>
-            </div>
-          </div>
-          <div class="col resume-item">
-            <div class="img-container">
-              <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
-              />
-            </div>
-            <div>
-              <p>niki belk</p>
-              <p>walk, play and care</p>
-            </div>
-            <div>
-              <p>new york</p>
-            </div>
-          </div>
-          <div class="col resume-item">
-            <div class="img-container">
-              <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
-              />
-            </div>
-            <div>
-              <p>niki belk</p>
-              <p>walk, play and care</p>
-            </div>
-            <div>
-              <p>new york</p>
-            </div>
-          </div>
-          <div class="col resume-item">
-            <div class="img-container">
-              <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
-              />
-            </div>
-            <div>
-              <p>niki belk</p>
-              <p>walk, play and care</p>
-            </div>
-            <div>
-              <p>new york</p>
-            </div>
-          </div>
-          <div class="col resume-item">
-            <div class="img-container">
-              <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
-              />
-            </div>
-            <div>
-              <h3>niki belk</h3>
-              <div>
-                <p>walk, play and care</p>
-                <p>new york</p>
-              </div>
-            </div>
-          </div>
+          <!--          <div class="col resume-item">-->
+          <!--            <div class="img-container">-->
+          <!--              <img-->
+          <!--                src="../assets/img/sitter_avatar_1.png"-->
+          <!--                alt="sitter-avatar"-->
+          <!--              />-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>niki belk</p>-->
+          <!--              <p>walk, play and care</p>-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>new york</p>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--          <div class="col resume-item">-->
+          <!--            <div class="img-container">-->
+          <!--              <img-->
+          <!--                src="../assets/img/sitter_avatar_1.png"-->
+          <!--                alt="sitter-avatar"-->
+          <!--              />-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>niki belk</p>-->
+          <!--              <p>walk, play and care</p>-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>new york</p>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--          <div class="col resume-item">-->
+          <!--            <div class="img-container">-->
+          <!--              <img-->
+          <!--                src="../assets/img/sitter_avatar_1.png"-->
+          <!--                alt="sitter-avatar"-->
+          <!--              />-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>niki belk</p>-->
+          <!--              <p>walk, play and care</p>-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>new york</p>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--          <div class="col resume-item">-->
+          <!--            <div class="img-container">-->
+          <!--              <img-->
+          <!--                src="../assets/img/sitter_avatar_1.png"-->
+          <!--                alt="sitter-avatar"-->
+          <!--              />-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>{{ sitter.name }}</p>-->
+          <!--              <p>walk, play and care</p>-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <p>new york</p>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--          <div class="col resume-item active">-->
+          <!--            <div class="img-container">-->
+          <!--              <img-->
+          <!--                src="../assets/img/sitter_avatar_1.png"-->
+          <!--                alt="sitter-avatar"-->
+          <!--              />-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--              <h3>niki belk</h3>-->
+          <!--              <div>-->
+          <!--                <p>walk, play and care</p>-->
+          <!--                <p>new york</p>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </div>-->
         </div>
       </div>
     </div>
@@ -311,6 +315,7 @@ import {
   MglScaleControl,
 } from "v-mapbox";
 import { reactive } from "vue";
+
 import BreadCrumb from "@/components/BreadCrumb";
 
 export default {
@@ -342,6 +347,7 @@ export default {
       pageTitle: {
         title: "Looking for a dog walker ",
       },
+      sitters: [],
     };
   },
   setup() {
@@ -370,6 +376,22 @@ export default {
   created() {
     this.mapbox = mapbox;
   },
+  mounted() {
+    this.getSitters();
+    console.log(this.sitters);
+  },
+  methods: {
+    featuredResumes() {},
+    getSitters() {
+      this.axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          this.sitters = response.data;
+          console.log(this.sitters);
+          console.log(response.data);
+        });
+    },
+  },
 };
 </script>
 
@@ -394,14 +416,21 @@ export default {
         border: 1px solid #e5e5e5;
         padding: 16px 20px;
         cursor: pointer;
+
         .img-container {
           border-radius: 50%;
           background-color: #fff;
           overflow: hidden;
         }
+
         div {
           height: 100%;
         }
+      }
+
+      .active {
+        background-color: #ffc107;
+        border: 1px solid #e5e5e5;
       }
     }
   }
