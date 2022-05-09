@@ -2,7 +2,7 @@
   <BreadCrumb :crumbs="crumbs" :page-title="pageTitle" />
   <div class="container">
     <div class="row">
-      <div class="col-7">
+      <div class="col-6">
         <div class="row sitter-container">
           <div class="col img-container">
             <img src="../assets/img/sitter_avatar_1.png" alt="sitter avatar" />
@@ -199,13 +199,13 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
-        <h2>Recent Resumes</h2>
+      <div class="col-5">
         <div class="row row-cols-1 resume-container">
+          <h2>Recent Resumes</h2>
           <div
             class="col resume-item"
-            v-for="(id, sitter) of sitters"
-            :key="id"
+            v-for="sitter of sitters"
+            :key="sitter.id"
           >
             <div class="img-container">
               <img
@@ -213,89 +213,35 @@
                 alt="sitter-avatar"
               />
             </div>
-            <div>
-              <p>{{ sitter }}</p>
-              <p>walk, play and care</p>
+            <div class="d-flex flex-column justify-content-between">
+              <p class="sitter-name">{{ sitter.name }}</p>
+              <p class="sitter-skill">walk, play and care</p>
             </div>
-            <div>
-              <p>{{ sitter.address[city] }}</p>
+            <div class="d-flex flex-column justify-content-end">
+              <p class="city">{{ sitter.address.city }}</p>
             </div>
           </div>
-          <!--          <div class="col resume-item">-->
-          <!--            <div class="img-container">-->
-          <!--              <img-->
-          <!--                src="../assets/img/sitter_avatar_1.png"-->
-          <!--                alt="sitter-avatar"-->
-          <!--              />-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>niki belk</p>-->
-          <!--              <p>walk, play and care</p>-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>new york</p>-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <!--          <div class="col resume-item">-->
-          <!--            <div class="img-container">-->
-          <!--              <img-->
-          <!--                src="../assets/img/sitter_avatar_1.png"-->
-          <!--                alt="sitter-avatar"-->
-          <!--              />-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>niki belk</p>-->
-          <!--              <p>walk, play and care</p>-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>new york</p>-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <!--          <div class="col resume-item">-->
-          <!--            <div class="img-container">-->
-          <!--              <img-->
-          <!--                src="../assets/img/sitter_avatar_1.png"-->
-          <!--                alt="sitter-avatar"-->
-          <!--              />-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>niki belk</p>-->
-          <!--              <p>walk, play and care</p>-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>new york</p>-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <!--          <div class="col resume-item">-->
-          <!--            <div class="img-container">-->
-          <!--              <img-->
-          <!--                src="../assets/img/sitter_avatar_1.png"-->
-          <!--                alt="sitter-avatar"-->
-          <!--              />-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>{{ sitter.name }}</p>-->
-          <!--              <p>walk, play and care</p>-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <p>new york</p>-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <!--          <div class="col resume-item active">-->
-          <!--            <div class="img-container">-->
-          <!--              <img-->
-          <!--                src="../assets/img/sitter_avatar_1.png"-->
-          <!--                alt="sitter-avatar"-->
-          <!--              />-->
-          <!--            </div>-->
-          <!--            <div>-->
-          <!--              <h3>niki belk</h3>-->
-          <!--              <div>-->
-          <!--                <p>walk, play and care</p>-->
-          <!--                <p>new york</p>-->
-          <!--              </div>-->
-          <!--            </div>-->
-          <!--          </div>-->
+        </div>
+        <div class="row row-cols-1 featured-resume_container">
+          <div
+            class="col resume-item"
+            v-for="sitter of sitters"
+            :key="sitter.id"
+          >
+            <div class="img-container">
+              <img
+                src="../assets/img/sitter_avatar_1.png"
+                alt="sitter-avatar"
+              />
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <p class="sitter-name">{{ sitter.name }}</p>
+              <p class="sitter-skill">walk, play and care</p>
+            </div>
+            <div class="d-flex flex-column justify-content-end">
+              <p class="city">{{ sitter.address.city }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -377,18 +323,16 @@ export default {
     this.mapbox = mapbox;
   },
   mounted() {
-    this.getSitters();
+    this.getList();
     console.log(this.sitters);
   },
   methods: {
     featuredResumes() {},
-    getSitters() {
+    getList() {
       this.axios
         .get("https://jsonplaceholder.typicode.com/users")
         .then((response) => {
           this.sitters = response.data;
-          console.log(this.sitters);
-          console.log(response.data);
         });
     },
   },
@@ -401,8 +345,18 @@ export default {
 
 .container > .row {
   gap: 30px;
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #000000;
+  }
 
-  > .col-4 {
+  > .col-5 {
     margin-top: 100px;
 
     .resume-container {
@@ -421,10 +375,49 @@ export default {
           border-radius: 50%;
           background-color: #fff;
           overflow: hidden;
+          width: 68px;
+          height: 68px;
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin-left: 2px;
+          }
         }
-
+        .sitter-name {
+          font-family: "Roboto", sans-serif;
+          font-size: 15px;
+          color: #000;
+        }
+        .sitter-skill {
+          font-family: "Nunito", sans-serif;
+          font-size: 13px;
+          color: #a6ce39;
+        }
+        .city {
+          color: #686868;
+          margin-left: 45px;
+        }
+        .city::before {
+          content: "";
+          position: absolute;
+          background-color: #454545;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          top: 5px;
+          left: -15px;
+        }
         div {
           height: 100%;
+          p {
+            text-transform: capitalize;
+            font-weight: 700;
+            white-space: nowrap;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+            position: relative;
+          }
         }
       }
 
@@ -463,6 +456,15 @@ export default {
 .description-container {
   padding-top: 26px;
   padding-bottom: 64px;
+  border-bottom: 1px solid #e5e5e5;
+  p {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: #686868;
+  }
 }
 
 .location-container {
@@ -481,6 +483,46 @@ export default {
     img {
       width: 100%;
     }
+  }
+  .sitter-info {
+    h2 {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 34px;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      color: #000000;
+    }
+    p {
+      font-family: "Nunito", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 23px;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      color: #454545;
+    }
+  }
+  .all-info {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #454545;
+  }
+  .contact-info {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #a6ce39;
   }
 }
 
