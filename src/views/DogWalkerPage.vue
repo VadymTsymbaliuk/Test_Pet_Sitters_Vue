@@ -209,7 +209,7 @@
           <div class="img-container">
             <img src="../assets/img/sitter_avatar_1.png" alt="sitter-avatar" />
           </div>
-          <div class="d-flex flex-column justify-content-between mr-3">
+          <div class="item_sitter-container mr-3">
             <p class="sitter-name">{{ sitter.name }}</p>
             <p class="sitter-skill">walk, play and care</p>
           </div>
@@ -228,11 +228,13 @@
           <div class="img-container">
             <img src="../assets/img/sitter_avatar_1.png" alt="sitter-avatar" />
           </div>
-          <div class="d-flex flex-column justify-content-between">
+          <div
+            class="item_sitter-container d-flex flex-column justify-content-between"
+          >
             <p class="sitter-name">{{ sitter.name }}</p>
             <p class="sitter-skill">walk, play and care</p>
           </div>
-          <div class="d-flex flex-column justify-content-end">
+          <div class="city-container d-flex flex-column justify-content-end">
             <p class="city">{{ sitter.address.city }}</p>
           </div>
         </div>
@@ -343,6 +345,7 @@ export default {
 @import "~v-mapbox/dist/v-mapbox.css";
 
 .dog-walker_container {
+  padding: 0 10px;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -392,6 +395,7 @@ export default {
           width: 68px;
           height: 68px;
           margin-right: 12px;
+
           img {
             width: 100%;
             height: 100%;
@@ -399,24 +403,38 @@ export default {
             margin-left: 2px;
           }
         }
-        .sitter-name {
-          font-family: "Roboto", sans-serif;
-          font-size: 15px;
-          color: #000;
+
+        .item_sitter-container {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          max-width: 138px;
+          margin-right: 1rem;
+
+          .sitter-name {
+            font-family: "Roboto", sans-serif;
+            font-size: 15px;
+            color: #000;
+            overflow: scroll;
+          }
+
+          .sitter-skill {
+            font-family: "Nunito", sans-serif;
+            font-size: 0.9rem;
+            color: #a6ce39;
+          }
         }
-        .sitter-skill {
-          font-family: "Nunito", sans-serif;
-          font-size: 0.9rem;
-          color: #a6ce39;
-        }
+
         .city-container {
           max-width: 69px;
           overflow: scroll;
+
           .city {
             color: #686868;
             margin-left: 15px;
             font-size: 0.9rem;
           }
+
           .city::before {
             content: "";
             position: absolute;
@@ -428,8 +446,10 @@ export default {
             left: -15px;
           }
         }
+
         div {
           height: 100%;
+
           p {
             text-transform: capitalize;
             font-weight: 700;
@@ -440,25 +460,24 @@ export default {
           }
         }
       }
+
       .featured {
         background-color: #ffc107;
+
         .sitter-skill,
         .city {
-          color: #fff;
+          color: #fff !important;
         }
-      }
-
-      .active {
-        background-color: #ffc107;
-        border: 1px solid #e5e5e5;
       }
     }
     .featured-resume_container {
       .resume-item {
         background-color: #ffc107;
-        .sitter-skill,
-        .city {
-          color: #fff;
+        .item_sitter-container {
+          .sitter-skill,
+          .city {
+            color: #fff;
+          }
         }
       }
     }
@@ -549,6 +568,48 @@ export default {
     letter-spacing: 0.05em;
     text-transform: capitalize;
     color: #454545;
+    p {
+      position: relative;
+      &:nth-child(1) {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -15px;
+          width: 10px;
+          height: 10px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("../assets/img/icons/sitter-card_icon-1.svg");
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -15px;
+          width: 10px;
+          height: 10px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("../assets/img/icons/sitter-card_icon-address.svg");
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -15px;
+          width: 10px;
+          height: 10px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("../assets/img/icons/sitter-card_icon-2.svg");
+        }
+      }
+    }
   }
   .contact-info {
     font-family: "Nunito", sans-serif;
@@ -559,6 +620,35 @@ export default {
     letter-spacing: 0.05em;
     text-transform: capitalize;
     color: #a6ce39;
+    p {
+      position: relative;
+      &:nth-child(1) {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -15px;
+          width: 10px;
+          height: 10px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("https://img.icons8.com/ios-glyphs/30/000000/twitter-circled--v1.png");
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -15px;
+          width: 10px;
+          height: 10px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-image: url("https://img.icons8.com/ios-glyphs/30/000000/twitter-circled--v1.png");
+        }
+      }
+    }
   }
 }
 
