@@ -416,6 +416,7 @@ export default {
             font-size: 15px;
             color: #000;
             overflow: scroll;
+            padding-bottom: 5px;
           }
 
           .sitter-skill {
@@ -433,6 +434,7 @@ export default {
             color: #686868;
             margin-left: 15px;
             font-size: 0.9rem;
+            padding-bottom: 5px;
           }
 
           .city::before {
@@ -745,6 +747,48 @@ export default {
               width: 15px;
             }
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .dog-walker_container {
+    .left-container {
+      .sitter-container {
+        flex-direction: column;
+        &::before {
+          width: 100vw;
+          left: -10px;
+        }
+      }
+      .description-container,
+      .location-container {
+        &::before {
+          width: 100vw;
+          left: -10px;
+        }
+      }
+    }
+    flex-direction: column;
+    .right-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 30px;
+      .resume-container {
+        max-width: 380px;
+        padding: 0 15px;
+        .resume-item {
+          max-height: 112px;
+        }
+      }
+      .featured-resume_container {
+        padding: 0 15px;
+        max-width: 380px;
+        display: block;
+        .resume-item {
+          max-height: 112px;
         }
       }
     }
