@@ -6,7 +6,7 @@
         <div class="col img-container">
           <img src="../assets/img/sitter_avatar_1.png" alt="sitter avatar" />
         </div>
-        <div class="col ml-5 d-flex flex-column justify-content-center">
+        <div class="col ml-1 ml-lg-5 d-flex flex-column justify-content-center">
           <div class="sitter-info">
             <h2>niki belk</h2>
             <p>walk, play and care</p>
@@ -763,7 +763,8 @@ export default {
         }
       }
       .description-container,
-      .location-container {
+      .location-container,
+      .user-comments {
         &::before {
           width: 100vw;
           left: -10px;
@@ -789,6 +790,45 @@ export default {
         display: block;
         .resume-item {
           max-height: 112px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 425px) {
+  .dog-walker_container {
+    .left-container {
+      .sitter-characteristics {
+        .row {
+          flex-direction: row !important;
+        }
+      }
+    }
+    .right-container {
+    }
+  }
+}
+@media screen and (min-width: 325px) {
+  .dog-walker_container {
+    width: 100vw;
+    .left-container,
+    .right-container {
+      max-width: 95vw;
+    }
+    .left-container {
+      .sitter-characteristics {
+        .row {
+          flex-direction: column;
+        }
+      }
+    }
+    .right-container {
+      flex-direction: column;
+      .resume-container,
+      .featured-resume_container {
+        padding: 0 15px;
+        .resume-item {
+          padding: 10px 5px;
         }
       }
     }
