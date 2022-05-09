@@ -1,246 +1,239 @@
 <template>
   <BreadCrumb :crumbs="crumbs" :page-title="pageTitle" />
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <div class="row sitter-container">
-          <div class="col img-container">
-            <img src="../assets/img/sitter_avatar_1.png" alt="sitter avatar" />
-          </div>
-          <div class="col ml-5 d-flex flex-column justify-content-center">
-            <div class="sitter-info">
-              <h2>niki belk</h2>
-              <p>walk, play and care</p>
-            </div>
-            <div class="all-info">
-              <p>dog walker</p>
-              <p>denver uS</p>
-              <p>posted 4 years ago</p>
-            </div>
-            <div class="contact-info">
-              <p>webcite</p>
-              <p>denfiser_dev</p>
-            </div>
-          </div>
+  <div class="dog-walker_container">
+    <div class="left-container">
+      <div class="row sitter-container">
+        <div class="col img-container">
+          <img src="../assets/img/sitter_avatar_1.png" alt="sitter avatar" />
         </div>
-        <div class="row description-container">
-          <div class="col">
-            <h2>Description</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-              animi asperiores atque consectetur debitis dolorum eligendi est et
-              mollitia nam natus nihil obcaecati, praesentium quia quod sed
-              tempore ullam vero.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              adipisci alias, cumque deserunt dolorem eum explicabo fugit hic
-              magnam nobis quaerat quasi quis, quisquam saepe sapiente tempora
-              velit. Nemo, sed!
-            </p>
+        <div class="col ml-5 d-flex flex-column justify-content-center">
+          <div class="sitter-info">
+            <h2>niki belk</h2>
+            <p>walk, play and care</p>
           </div>
-        </div>
-        <div class="row location-container">
-          <div class="col">
-            <h2>Location</h2>
-            <v-map class="map" :options="state.map">
-              <MglAttributionControl />
-              <MglNavigationControl position="top-right" />
-              <MglGeolocateControl position="top-right" />
-              <MglNavigationControl position="top-right" />
-              <MglGeolocateControl position="top-right" />
-              <MglScaleControl />
-              <MglFullscreenControl />
-            </v-map>
+          <div class="all-info">
+            <p>dog walker</p>
+            <p>denver uS</p>
+            <p>posted 4 years ago</p>
           </div>
-        </div>
-        <div class="sitter-characteristics">
-          <div class="row">
-            <div class="col">
-              <h3>Skils</h3>
-              <ul>
-                <li>Skil</li>
-                <li>Skil</li>
-                <li>Skil</li>
-                <li>Skil</li>
-                <li>Skil</li>
-              </ul>
-            </div>
-            <div class="col">
-              <h3>Experiense</h3>
-              <ul>
-                <li>Experiense</li>
-                <li>Experiense</li>
-                <li>Experiense</li>
-                <li>Experiense</li>
-                <li>Experiense</li>
-              </ul>
-            </div>
-            <div class="col">
-              <h3>Education</h3>
-              <ul>
-                <li>Education</li>
-                <li>Education</li>
-                <li>Education</li>
-                <li>Education</li>
-                <li>Education</li>
-              </ul>
-            </div>
-          </div>
-          <button class="btn btn-info">contact</button>
-        </div>
-        <div class="row user-comments">
-          <div class="col">
-            <h2>What people say?</h2>
-            <div class="select-container">
-              <p>Sort by:</p>
-              <select>
-                <option value="anyCategory" label selected>Any category</option>
-                <option value="cat">Cat sitter</option>
-                <option value="dog">Dog sitter</option>
-                <option value="bird">Bird sitter</option>
-              </select>
-            </div>
-
-            <div class="comments-container">
-              <div class="comment-item">
-                <img
-                  src="https://img.icons8.com/plasticine/100/000000/user.png"
-                />
-                <div class="d-flex flex-row">
-                  <div>
-                    <div class="stars-container">1111</div>
-                    <p>cool</p>
-                    <p>test</p>
-                    <p>june 23, 2022, 12:45 pm</p>
-                  </div>
-                </div>
-                <div class="rating-container">
-                  <div class="like">
-                    <button class="btn">
-                      <img
-                        src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
-                      />
-                    </button>
-                  </div>
-                  <div class="dislike">
-                    <button class="btn">
-                      <img
-                        src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-item">
-                <img
-                  src="https://img.icons8.com/plasticine/100/000000/user.png"
-                />
-                <div class="d-flex flex-row">
-                  <div>
-                    <div class="stars-container">1111</div>
-                    <p>cool</p>
-                    <p>test</p>
-                    <p>june 23, 2022, 12:45 pm</p>
-                  </div>
-                </div>
-                <div class="rating-container">
-                  <div class="like">
-                    <button class="btn">
-                      <img
-                        src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
-                      />
-                    </button>
-                  </div>
-                  <div class="dislike">
-                    <button class="btn">
-                      <img
-                        src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-item">
-                <img
-                  src="https://img.icons8.com/plasticine/100/000000/user.png"
-                />
-                <div class="d-flex flex-row">
-                  <div>
-                    <div class="stars-container">1111</div>
-                    <p>cool</p>
-                    <p>test</p>
-                    <p>june 23, 2022, 12:45 pm</p>
-                  </div>
-                </div>
-                <div class="rating-container">
-                  <div class="like">
-                    <button class="btn">
-                      <img
-                        src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
-                      />
-                    </button>
-                  </div>
-                  <div class="dislike">
-                    <button class="btn">
-                      <img
-                        src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col text-center mt-5 pt-3">
-            <button class="btn text-uppercase font-weight-bold">
-              show more
-            </button>
+          <div class="contact-info">
+            <p>webcite</p>
+            <p>denfiser_dev</p>
           </div>
         </div>
       </div>
-      <div class="col-5">
-        <div class="row row-cols-1 resume-container">
-          <h2>Recent Resumes</h2>
-          <div
-            class="col resume-item"
-            v-for="sitter of sitters"
-            :key="sitter.id"
-          >
-            <div class="img-container">
+      <div class="row description-container">
+        <div class="col">
+          <h2>Description</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+            animi asperiores atque consectetur debitis dolorum eligendi est et
+            mollitia nam natus nihil obcaecati, praesentium quia quod sed
+            tempore ullam vero.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            adipisci alias, cumque deserunt dolorem eum explicabo fugit hic
+            magnam nobis quaerat quasi quis, quisquam saepe sapiente tempora
+            velit. Nemo, sed!
+          </p>
+        </div>
+      </div>
+      <div class="row location-container">
+        <div class="col">
+          <h2>Location</h2>
+          <v-map class="map" :options="state.map">
+            <MglAttributionControl />
+            <MglNavigationControl position="top-right" />
+            <MglGeolocateControl position="top-right" />
+            <MglNavigationControl position="top-right" />
+            <MglGeolocateControl position="top-right" />
+            <MglScaleControl />
+            <MglFullscreenControl />
+          </v-map>
+        </div>
+      </div>
+      <div class="sitter-characteristics">
+        <div class="row">
+          <div class="col">
+            <h3>Skils</h3>
+            <ul>
+              <li>Skil</li>
+              <li>Skil</li>
+              <li>Skil</li>
+              <li>Skil</li>
+              <li>Skil</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Experiense</h3>
+            <ul>
+              <li>Experiense</li>
+              <li>Experiense</li>
+              <li>Experiense</li>
+              <li>Experiense</li>
+              <li>Experiense</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Education</h3>
+            <ul>
+              <li>Education</li>
+              <li>Education</li>
+              <li>Education</li>
+              <li>Education</li>
+              <li>Education</li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn btn-info">contact</button>
+      </div>
+      <div class="row user-comments">
+        <div class="col">
+          <h2>What people say?</h2>
+          <div class="select-container">
+            <p>Sort by:</p>
+            <select>
+              <option value="anyCategory" label selected>Any category</option>
+              <option value="cat">Cat sitter</option>
+              <option value="dog">Dog sitter</option>
+              <option value="bird">Bird sitter</option>
+            </select>
+          </div>
+
+          <div class="comments-container">
+            <div class="comment-item">
               <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
+                src="https://img.icons8.com/plasticine/100/000000/user.png"
               />
+              <div class="d-flex flex-row">
+                <div>
+                  <div class="stars-container">1111</div>
+                  <p>cool</p>
+                  <p>test</p>
+                  <p>june 23, 2022, 12:45 pm</p>
+                </div>
+              </div>
+              <div class="rating-container">
+                <div class="like">
+                  <button class="btn">
+                    <img
+                      src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
+                    />
+                  </button>
+                </div>
+                <div class="dislike">
+                  <button class="btn">
+                    <img
+                      src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-column justify-content-between">
-              <p class="sitter-name">{{ sitter.name }}</p>
-              <p class="sitter-skill">walk, play and care</p>
+            <div class="comment-item">
+              <img
+                src="https://img.icons8.com/plasticine/100/000000/user.png"
+              />
+              <div class="d-flex flex-row">
+                <div>
+                  <div class="stars-container">1111</div>
+                  <p>cool</p>
+                  <p>test</p>
+                  <p>june 23, 2022, 12:45 pm</p>
+                </div>
+              </div>
+              <div class="rating-container">
+                <div class="like">
+                  <button class="btn">
+                    <img
+                      src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
+                    />
+                  </button>
+                </div>
+                <div class="dislike">
+                  <button class="btn">
+                    <img
+                      src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="d-flex flex-column justify-content-end">
-              <p class="city">{{ sitter.address.city }}</p>
+            <div class="comment-item">
+              <img
+                src="https://img.icons8.com/plasticine/100/000000/user.png"
+              />
+              <div class="d-flex flex-row">
+                <div>
+                  <div class="stars-container">1111</div>
+                  <p>cool</p>
+                  <p>test</p>
+                  <p>june 23, 2022, 12:45 pm</p>
+                </div>
+              </div>
+              <div class="rating-container">
+                <div class="like">
+                  <button class="btn">
+                    <img
+                      src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-like-feedback-those-icons-fill-those-icons.png"
+                    />
+                  </button>
+                </div>
+                <div class="dislike">
+                  <button class="btn">
+                    <img
+                      src="https://img.icons8.com/glyph-neue/64/000000/poor-quality.png"
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row row-cols-1 featured-resume_container">
-          <div
-            class="col resume-item"
-            v-for="sitter of sitters"
-            :key="sitter.id"
-          >
-            <div class="img-container">
-              <img
-                src="../assets/img/sitter_avatar_1.png"
-                alt="sitter-avatar"
-              />
-            </div>
-            <div class="d-flex flex-column justify-content-between">
-              <p class="sitter-name">{{ sitter.name }}</p>
-              <p class="sitter-skill">walk, play and care</p>
-            </div>
-            <div class="d-flex flex-column justify-content-end">
-              <p class="city">{{ sitter.address.city }}</p>
-            </div>
+        <div class="col text-center mt-5 pt-3">
+          <button class="btn text-uppercase font-weight-bold">show more</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="row row-cols-1 resume-container">
+        <h2>Recent Resumes</h2>
+        <div
+          class="col resume-item"
+          v-for="sitter of sitters"
+          :key="sitter.id"
+          v-bind:class="{ featured: sitter === featuredSitter }"
+          @click="checkResume(sitter)"
+        >
+          <div class="img-container">
+            <img src="../assets/img/sitter_avatar_1.png" alt="sitter-avatar" />
+          </div>
+          <div class="d-flex flex-column justify-content-between mr-3">
+            <p class="sitter-name">{{ sitter.name }}</p>
+            <p class="sitter-skill">walk, play and care</p>
+          </div>
+          <div class="city-container d-flex flex-column justify-content-end">
+            <p class="city">{{ sitter.address.city }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 featured-resume_container">
+        <h2>featured resumes</h2>
+        <div
+          class="col resume-item"
+          v-for="sitter of featuredResumes"
+          :key="sitter.id"
+        >
+          <div class="img-container">
+            <img src="../assets/img/sitter_avatar_1.png" alt="sitter-avatar" />
+          </div>
+          <div class="d-flex flex-column justify-content-between">
+            <p class="sitter-name">{{ sitter.name }}</p>
+            <p class="sitter-skill">walk, play and care</p>
+          </div>
+          <div class="d-flex flex-column justify-content-end">
+            <p class="city">{{ sitter.address.city }}</p>
           </div>
         </div>
       </div>
@@ -294,6 +287,8 @@ export default {
         title: "Looking for a dog walker ",
       },
       sitters: [],
+      featuredResumes: [],
+      featuredSitter: null,
     };
   },
   setup() {
@@ -327,13 +322,17 @@ export default {
     console.log(this.sitters);
   },
   methods: {
-    featuredResumes() {},
     getList() {
       this.axios
         .get("https://jsonplaceholder.typicode.com/users")
         .then((response) => {
           this.sitters = response.data;
         });
+    },
+    checkResume(sitter) {
+      console.log(sitter);
+      this.featuredSitter = sitter;
+      this.featuredResumes.push(sitter);
     },
   },
 };
@@ -343,8 +342,13 @@ export default {
 @import "~mapbox-gl/dist/mapbox-gl.css";
 @import "~v-mapbox/dist/v-mapbox.css";
 
-.container > .row {
+.dog-walker_container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
   gap: 30px;
+
   h2 {
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -355,11 +359,21 @@ export default {
     text-transform: capitalize;
     color: #000000;
   }
+  .left-container,
+  .right-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .left-container {
+    width: 750px;
+  }
 
-  > .col-5 {
+  .right-container {
+    width: 350px;
     margin-top: 100px;
 
-    .resume-container {
+    .resume-container,
+    .featured-resume_container {
       margin-top: 42px;
 
       .resume-item {
@@ -368,7 +382,7 @@ export default {
         align-items: center;
         background-color: #f3f5eb;
         border: 1px solid #e5e5e5;
-        padding: 16px 20px;
+        padding: 17px 16px;
         cursor: pointer;
 
         .img-container {
@@ -377,6 +391,7 @@ export default {
           overflow: hidden;
           width: 68px;
           height: 68px;
+          margin-right: 12px;
           img {
             width: 100%;
             height: 100%;
@@ -391,22 +406,27 @@ export default {
         }
         .sitter-skill {
           font-family: "Nunito", sans-serif;
-          font-size: 13px;
+          font-size: 0.9rem;
           color: #a6ce39;
         }
-        .city {
-          color: #686868;
-          margin-left: 45px;
-        }
-        .city::before {
-          content: "";
-          position: absolute;
-          background-color: #454545;
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          top: 5px;
-          left: -15px;
+        .city-container {
+          max-width: 69px;
+          overflow: scroll;
+          .city {
+            color: #686868;
+            margin-left: 15px;
+            font-size: 0.9rem;
+          }
+          .city::before {
+            content: "";
+            position: absolute;
+            background-color: #454545;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            top: 5px;
+            left: -15px;
+          }
         }
         div {
           height: 100%;
@@ -420,10 +440,26 @@ export default {
           }
         }
       }
+      .featured {
+        background-color: #ffc107;
+        .sitter-skill,
+        .city {
+          color: #fff;
+        }
+      }
 
       .active {
         background-color: #ffc107;
         border: 1px solid #e5e5e5;
+      }
+    }
+    .featured-resume_container {
+      .resume-item {
+        background-color: #ffc107;
+        .sitter-skill,
+        .city {
+          color: #fff;
+        }
       }
     }
   }
