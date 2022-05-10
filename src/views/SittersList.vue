@@ -7,68 +7,15 @@
     <section class="section section-2">
       <div class="card-container">
         <SitterCard
+          v-for="sitter of sitters"
+          :key="sitter.id"
           :sitter-avatar="require(`../assets/img/sitter_avatar_2.png`)"
-          sitter-name="niki belk"
+          :sitter-name="sitter.name"
           sitter-skill="walk, play and care"
-          sitter-address="denver us"
+          :sitter-address="sitter.address.city"
           sitter-profession="dog walker"
           date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_1.png`)"
-          sitter-name="bren femiano"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_2.png`)"
-          sitter-name="niki belk"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_1.png`)"
-          sitter-name="bren femiano"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_2.png`)"
-          sitter-name="niki belk"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_1.png`)"
-          sitter-name="bren femiano"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_1.png`)"
-          sitter-name="bren femiano"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
-        />
-        <SitterCard
-          :sitter-avatar="require(`../assets/img/sitter_avatar_1.png`)"
-          sitter-name="bren femiano"
-          sitter-skill="walk, play and care"
-          sitter-address="denver us"
-          sitter-profession="dog walker"
-          date-post="posted 4 years ago"
+          @click="showUserRCV()"
         />
       </div>
     </section>
@@ -97,11 +44,26 @@ export default {
       pageTitle: {
         title: "Title",
       },
+      sitters: [],
     };
+  },
+  mounted() {
+    this.getSitters();
   },
   methods: {
     selected(crumb) {
       console.log(crumb);
+    },
+    getSitters() {
+      this.axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          this.sitters = response.data;
+          console.log(this.sitters);
+        });
+    },
+    showUserRCV() {
+      this.$router.push("/dog-walker");
     },
   },
 };
@@ -120,7 +82,7 @@ export default {
 }
 .section-2 {
   background-color: #c4c4c4;
-  padding-bottom: 100px;
+  padding: 100px 10px;
   .card-container {
     max-width: 1080px;
     margin: 0 auto;
@@ -128,6 +90,30 @@ export default {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 30px 90px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section-2 {
+    padding: 0 10px;
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px 70px;
+      .card {
+        max-width: 188px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-2 .card-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .section-2 .card-container {
+    grid-template-columns: 1fr;
   }
 }
 </style>
