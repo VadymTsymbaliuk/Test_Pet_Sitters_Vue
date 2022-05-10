@@ -786,6 +786,7 @@ export default {
 @media screen and (min-width: 425px) {
   .dog-walker_container {
     .left-container {
+      max-width: 100%;
       .sitter-characteristics {
         .row {
           flex-direction: row !important;
