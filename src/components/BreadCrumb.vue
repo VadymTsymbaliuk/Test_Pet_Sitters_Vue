@@ -8,14 +8,13 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item" v-for="(crumb, ci) in crumbs" :key="ci">
-              <router-link
-                to="{{ crumb.path }}"
+              <button
                 class="btn btn-link"
                 :class="{ disabled: isLast(ci) }"
                 @click="selected(crumb)"
               >
                 {{ crumb.title }}
-              </router-link>
+              </button>
             </li>
           </ol>
         </nav>
@@ -47,6 +46,7 @@ export default {
     },
     selected(crumb) {
       console.log(crumb);
+      this.$router.push(crumb.path);
     },
   },
 };

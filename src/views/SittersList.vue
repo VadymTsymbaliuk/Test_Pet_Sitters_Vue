@@ -34,7 +34,7 @@ export default {
       crumbs: [
         {
           title: "Home",
-          path: "",
+          path: "/",
         },
         {
           title: "Sitter list",

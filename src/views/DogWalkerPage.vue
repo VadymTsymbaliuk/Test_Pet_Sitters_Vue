@@ -42,9 +42,9 @@
       <div class="row location-container">
         <div class="col">
           <h2>Location</h2>
-          <v-map class="map" :options="state.map" :attributionControl="false">
+          <VMap class="map" :options="state.map" :attributionControl="false">
             <MglNavigationControl position="top-right" />
-          </v-map>
+          </VMap>
         </div>
       </div>
       <div class="sitter-characteristics">
@@ -262,6 +262,10 @@ export default {
         {
           title: "Home",
           path: "/",
+        },
+        {
+          title: "Sitters",
+          path: "sitters-list",
         },
         {
           title: "Dog walker",
