@@ -42,14 +42,8 @@
       <div class="row location-container">
         <div class="col">
           <h2>Location</h2>
-          <v-map class="map" :options="state.map">
-            <MglAttributionControl />
+          <v-map class="map" :options="state.map" :attributionControl="false">
             <MglNavigationControl position="top-right" />
-            <MglGeolocateControl position="top-right" />
-            <MglNavigationControl position="top-right" />
-            <MglGeolocateControl position="top-right" />
-            <MglScaleControl />
-            <MglFullscreenControl />
           </v-map>
         </div>
       </div>
@@ -209,7 +203,7 @@
           <div class="img-container">
             <img src="../assets/img/sitter_avatar_1.png" alt="sitter-avatar" />
           </div>
-          <div class="item_sitter-container mr-3">
+          <div class="item_sitter-container">
             <p class="sitter-name">{{ sitter.name }}</p>
             <p class="sitter-skill">walk, play and care</p>
           </div>
@@ -247,14 +241,7 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import "v-mapbox/dist/v-mapbox.css";
 import mapbox from "mapbox-gl";
-import {
-  VMap,
-  MglAttributionControl,
-  MglNavigationControl,
-  MglGeolocateControl,
-  MglFullscreenControl,
-  MglScaleControl,
-} from "v-mapbox";
+import { VMap, MglNavigationControl } from "v-mapbox";
 import { reactive } from "vue";
 
 import BreadCrumb from "@/components/BreadCrumb";
@@ -264,11 +251,7 @@ export default {
   components: {
     BreadCrumb,
     VMap,
-    MglAttributionControl,
     MglNavigationControl,
-    MglGeolocateControl,
-    MglFullscreenControl,
-    MglScaleControl,
   },
   data() {
     return {
@@ -305,6 +288,7 @@ export default {
         crossSourceCollisions: false,
         failIfMajorPerformanceCaveat: false,
         attributionControl: true,
+        navigationControll: true,
         preserveDrawingBuffer: true,
         hash: false,
         minPitch: 0,
@@ -372,7 +356,7 @@ export default {
   }
 
   .right-container {
-    width: 350px;
+    width: 430px;
     margin-top: 100px;
 
     .resume-container,
@@ -381,7 +365,7 @@ export default {
 
       .resume-item {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         align-items: center;
         background-color: #f3f5eb;
         border: 1px solid #e5e5e5;
@@ -408,14 +392,14 @@ export default {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
-          max-width: 138px;
+          max-width: 160px;
           margin-right: 1rem;
 
           .sitter-name {
             font-family: "Roboto", sans-serif;
             font-size: 15px;
             color: #000;
-            overflow: scroll;
+            //overflow: scroll;
             padding-bottom: 5px;
           }
 
@@ -427,8 +411,8 @@ export default {
         }
 
         .city-container {
-          max-width: 69px;
-          overflow: scroll;
+          max-width: 160px;
+          //overflow: scroll;
 
           .city {
             color: #686868;
