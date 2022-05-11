@@ -15,7 +15,7 @@
         <div><h3>Featured Pet Sitters</h3></div>
         <div><h3>Featured Pet Jobs</h3></div>
       </div>
-      <div class="row">
+      <div class="row align-items-center">
         <div class="card-container d-flex">
           <SitterCard
             :sitter-avatar="require(`../assets/img/sitter_avatar_2.png`)"
@@ -260,6 +260,7 @@ export default {
 .bg-sec {
   background-color: #f3f5eb;
 }
+
 .features-item {
   max-width: 230px;
 
@@ -351,207 +352,6 @@ export default {
   }
 }
 
-.wrapper_icon {
-  img {
-    align-self: center;
-    max-width: 40px;
-  }
-}
-
-.form_slide {
-  border-radius: 10px;
-
-  h4 {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: white;
-  }
-
-  background: #686868;
-  position: absolute;
-  right: 20px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 340px;
-  height: 300px;
-  z-index: 2;
-
-  input {
-    padding: 5px;
-    width: 80%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: none;
-  }
-
-  button {
-    background: #a6ce39;
-    border: none;
-    color: #f3f5eb;
-    width: 80%;
-    border-radius: 10px;
-  }
-}
-
-.icon_number {
-  font-size: 25px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.select-css {
-  width: 80%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  padding: 5px;
-}
-
-.featured-jobs_container {
-  position: relative;
-  max-width: 350px;
-}
-
-.featured-jobs_user {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(104, 104, 104, 0.67);
-  padding: 14px 17px;
-  color: #fff;
-
-  h3 {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-  }
-
-  p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: 0.05em;
-  }
-
-  .jobs-category_container {
-    display: flex;
-    justify-content: space-between;
-
-    p {
-      font-size: 8px;
-      line-height: 11px;
-      position: relative;
-    }
-
-    p:before {
-      position: absolute;
-      content: "";
-      width: 10px;
-      height: 10px;
-      left: -13px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
-    }
-
-    p:nth-child(1):before {
-      background-image: url("../assets/img/icons/home-second/sec-2_row-2_icon-1.svg");
-    }
-
-    p:nth-child(2):before {
-      background-image: url("../assets/img/icons/home-second/sec-2_row-2_icon-2.svg");
-    }
-
-    p:nth-child(3):before {
-      background-image: url("../assets/img/icons/home-second/sec-2_row-2_icon-3.svg");
-    }
-  }
-}
-
-.job-request_container {
-  max-width: 350px;
-  height: 40%;
-  max-height: 295px;
-  background-color: #ececec;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  padding: 50px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-
-  h3 {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-  }
-
-  p {
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.05em;
-  }
-
-  button {
-    color: #ffffff;
-    background: #39b3ce;
-    border-radius: 10px;
-    border: none;
-    padding: 5px 50px;
-  }
-}
-
-.wrapper_support {
-  .align-content-center {
-    z-index: 1;
-  }
-  button {
-    border: none;
-    background: #39b3ce;
-    color: #f3f5eb;
-    border-radius: 10px;
-    padding: 5px 45px;
-  }
-  h3 {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    text-transform: capitalize;
-    color: #ffffff;
-  }
-  p {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-
-  color: #f3f5eb;
-  padding-bottom: 80px;
-  padding-top: 80px;
-  text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
-}
-.wrapper_support:before {
-  content: "";
-  height: 40%;
-  width: 100%;
-  top: 0;
-  position: absolute;
-  background-color: #a6ce39;
-}
-
 .bg_support {
   background-image: url("../assets/img/bg_suport_2.png");
 }
@@ -569,6 +369,7 @@ export default {
   //  height: 300px;
   //}
 }
+
 .featured-pet {
   margin-top: 100px;
 }
