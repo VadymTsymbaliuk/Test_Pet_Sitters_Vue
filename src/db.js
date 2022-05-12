@@ -3,15 +3,13 @@ import "firebase/compat/firestore";
 
 import { ref, onUnmounted } from "vue";
 const config = {
-  apiKey: "AIzaSyBK-5MD7qGWtTlNKjoS-YE9DRicMaEzzjY",
-  authDomain: "pet-sitters-69807.firebaseapp.com",
-  databaseURL:
-    "https://pet-sitters-69807-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "pet-sitters-69807",
-  storageBucket: "pet-sitters-69807.appspot.com",
-  messagingSenderId: "440870005397",
-  appId: "1:440870005397:web:4020e43d536c8eed83c99c",
-  measurementId: "G-Z9EHP492D2",
+  apiKey: "AIzaSyCaKVIpHo6BkgQAEf6g1hva5GMsstnZuz4",
+  authDomain: "pet-sitter-e8ebe.firebaseapp.com",
+  projectId: "pet-sitter-e8ebe",
+  storageBucket: "pet-sitter-e8ebe.appspot.com",
+  messagingSenderId: "221415322509",
+  appId: "1:221415322509:web:0d1e69280a0cda97be43c4",
+  measurementId: "G-161EJQ0Y9V",
 };
 
 const firebaseApp = firebase.initializeApp(config);
