@@ -21,14 +21,30 @@
               ><img src="../assets/img/google-plus.png" /> Log in with Google</a
             >
           </div>
-
-          <input placeholder="Name" type="" />
-          <input placeholder="Last Name" type="text" />
-          <input placeholder="Email" type="email" />
-          <input placeholder="Phone" type="text" />
-          <input placeholder="Countries" type="text" />
-          <input placeholder="City" type="text" />
-          <button>Sing Up</button>
+          <form @submit.prevent="onSubmit">
+            <div class="d-flex flex-column">
+              <input
+                placeholder="Name"
+                type="name"
+                name="name"
+                v-model="form.name"
+              />
+              <input
+                placeholder="Last Name"
+                type="text"
+                v-model="form.lastName"
+              />
+              <input placeholder="Email" type="email" v-model="form.email" />
+              <input placeholder="Phone" type="text" v-model="form.phone" />
+              <input
+                placeholder="Countries"
+                type="text"
+                v-model="form.countries"
+              />
+              <input placeholder="City" type="text" v-model="form.city" />
+            </div>
+            <button type="submit" class="d-block m-auto">Sing Up</button>
+          </form>
           <div class="wrapper_text_info">
             <span class="text_info"
               >By creating an account, you agree to pet sitter </span
@@ -42,9 +58,34 @@
 </template>
 
 <script>
+import { createUser } from "@/db";
+import { reactive } from "vue";
 export default {
   name: "HomeView",
   components: {},
+  setup() {
+    const form = reactive({
+      name: "",
+      lastName: "",
+      email: "",
+      phone: null,
+      countries: "",
+      city: "",
+    });
+    const onSubmit = async () => {
+      await createUser({ ...form });
+      form.name = "";
+      form.lastName = "";
+      form.email = "";
+      form.phone = null;
+      form.countries = "";
+      form.city = "";
+    };
+    return {
+      form,
+      onSubmit,
+    };
+  },
 };
 </script>
 
