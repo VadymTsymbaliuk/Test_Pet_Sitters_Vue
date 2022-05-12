@@ -22,13 +22,38 @@
             >
           </div>
 
-          <input placeholder="Name" type="" />
+          <input placeholder="Name" type="name" name="name" />
           <input placeholder="Last Name" type="text" />
           <input placeholder="Email" type="email" />
           <input placeholder="Phone" type="text" />
           <input placeholder="Countries" type="text" />
           <input placeholder="City" type="text" />
+
           <button>Sing Up</button>
+          <form @submit.prevent="onSubmit">
+            <div class="form-group">
+              <label>Name</label>
+              <input
+                v-model="form.name"
+                class="form-control"
+                type="text"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                v-model="form.email"
+                class="form-control mt-3"
+                type="email"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-success mt-3">
+              Create User
+            </button>
+          </form>
+
           <div class="wrapper_text_info">
             <span class="text_info"
               >By creating an account, you agree to pet sitter </span
@@ -42,9 +67,39 @@
 </template>
 
 <script>
+// import { createUser } from "@/db";
+import db from "@/db";
+import { reactive } from "vue";
+
 export default {
   name: "HomeView",
   components: {},
+  methods: {},
+  setup() {
+    const form = reactive({ name: "a", email: "aaa@mmm.mmm" });
+    const onSubmit = () => {
+      db.collection("cities")
+        .add({
+          name: "Tokyo",
+          country: "Japan",
+        })
+        .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+          console.error("Error adding document: ", error);
+        });
+      // createUser({
+      //   name: "Tokyo",
+      //   country: "Japan",
+      // });
+      // .then(() => {
+      // form.name = "";
+      // form.email = "";
+      // });
+    };
+    return { form, onSubmit };
+  },
 };
 </script>
 
