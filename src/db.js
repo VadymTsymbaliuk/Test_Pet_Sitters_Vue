@@ -17,7 +17,7 @@ const config = {
 const firebaseApp = firebase.initializeApp(config);
 
 const db = firebaseApp.firestore();
-const usersCollection = db.collection("users");
+export const usersCollection = db.collection("users");
 
 export const createUser = (user) => {
   console.log(user);
@@ -45,5 +45,3 @@ export const useLoadUsers = () => {
   onUnmounted(close);
   return users;
 };
-
-export default db;

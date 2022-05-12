@@ -67,38 +67,25 @@
 </template>
 
 <script>
-// import { createUser } from "@/db";
-import db from "@/db";
+import { createUser } from "@/db";
 import { reactive } from "vue";
-
 export default {
   name: "HomeView",
   components: {},
-  methods: {},
   setup() {
-    const form = reactive({ name: "a", email: "aaa@mmm.mmm" });
-    const onSubmit = () => {
-      db.collection("cities")
-        .add({
-          name: "Tokyo",
-          country: "Japan",
-        })
-        .then((docRef) => {
-          console.log("Document written with ID: ", docRef.id);
-        })
-        .catch((error) => {
-          console.error("Error adding document: ", error);
-        });
-      // createUser({
-      //   name: "Tokyo",
-      //   country: "Japan",
-      // });
-      // .then(() => {
-      // form.name = "";
-      // form.email = "";
-      // });
+    const form = reactive({
+      name: "",
+      email: "",
+    });
+    const onSubmit = async () => {
+      await createUser({ ...form });
+      form.name = "";
+      form.email = "";
     };
-    return { form, onSubmit };
+    return {
+      form,
+      onSubmit,
+    };
   },
 };
 </script>
