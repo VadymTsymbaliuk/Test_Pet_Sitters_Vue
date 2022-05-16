@@ -21,10 +21,11 @@
               ><img src="../assets/img/google-plus.png" /> Log in with Google</a
             >
           </div>
-
-          <input placeholder="login" type="text" />
-          <input placeholder="Password" type="text" />
-          <button>login</button>
+          <div class="d-flex flex-column mb-3">
+            <input placeholder="login" type="text" v-model="email" />
+            <input placeholder="Password" type="text" v-model="password" />
+            <button class="d-block m-auto" @click="login">login</button>
+          </div>
           <div class="">
             <span class="text_info">Don’t have an Account?</span
             ><a class="crate_account">Create an Account</a>
@@ -40,9 +41,31 @@
 </template>
 
 <script>
+import firebase from "firebase/compat/app";
+
 export default {
   name: "HomeView",
   components: {},
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(() => {
+          alert("Successfully logged in");
+          this.$router.push("/");
+        })
+        .catch((e) => {
+          alert(e.message);
+        });
+    },
+  },
 };
 </script>
 <style scoped lang="scss">

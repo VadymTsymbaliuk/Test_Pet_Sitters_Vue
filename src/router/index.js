@@ -9,12 +9,16 @@ import AllJobs from "@/views/AllJobs";
 import AnimalsCard from "@/views/AnimalsCard";
 import DogWalkerPage from "@/views/DogWalkerPage";
 import FeaturedPetSitters from "@/views/FeaturedPetSitters";
+import firebase from "firebase/compat/app";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+    meta: {
+      authRequired: true,
+    },
   },
   {
     path: "/home-second",
@@ -66,6 +70,20 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.authRequired)) {
+    if (firebase.auth().currentUser) {
+      next();
+    } else {
+      alert("You must be logged in to see this page");
+      next({
+        path: "/",
+      });
+    }
+  } else {
+    next();
+  }
 });
 
 export default router;

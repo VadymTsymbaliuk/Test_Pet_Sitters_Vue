@@ -45,6 +45,20 @@
             </div>
             <button type="submit" class="d-block m-auto">Sing Up</button>
           </form>
+          <div>
+            <h2>Register</h2>
+            <input
+              type="email"
+              placeholder="Email address..."
+              v-model="authEmail"
+            />
+            <input
+              type="password"
+              placeholder="password..."
+              v-model="authPassword"
+            />
+            <button @click="register">Register</button>
+          </div>
           <div class="wrapper_text_info">
             <span class="text_info"
               >By creating an account, you agree to pet sitter </span
@@ -60,9 +74,18 @@
 <script>
 import { createUser } from "@/db";
 import { reactive } from "vue";
+import firebase from "firebase/compat/app";
+require("firebase/compat/auth");
+
 export default {
   name: "HomeView",
   components: {},
+  data() {
+    return {
+      authEmail: "",
+      authPassword: "",
+    };
+  },
   setup() {
     const form = reactive({
       name: "",
@@ -81,10 +104,27 @@ export default {
       form.countries = "";
       form.city = "";
     };
+
     return {
       form,
       onSubmit,
     };
+  },
+  methods: {
+    register() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.authEmail, this.authPassword)
+        .then(() => {
+          console.log(this.authEmail, this.authPassword);
+          console.log("successfully registered");
+          this.$router.push("/");
+        })
+        .catch((e) => {
+          console.log(this.authEmail, this.authPassword);
+          console.log(e.message);
+        });
+    },
   },
 };
 </script>
