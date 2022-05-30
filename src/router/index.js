@@ -3,8 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import HomeSecond from "@/views/HomeSecond";
 import VJobs from "@/views/VJobs";
 import SittersList from "@/views/SittersList";
-import RegisterView from "@/views/RegisterView";
-import LoginView from "@/views/LoginView";
+import RegisterPage from "@/views/RegisterPage";
+import LoginPage from "@/views/LoginPage";
 import AllJobs from "@/views/AllJobs";
 import AnimalsCard from "@/views/AnimalsCard";
 import DogWalkerPage from "@/views/DogWalkerPage";
@@ -51,14 +51,14 @@ const routes = [
     component: FeaturedPetSitters,
   },
   {
-    path: "/register-login",
-    name: "RegisterView",
-    component: RegisterView,
+    path: "/login-page",
+    name: "LoginView",
+    component: LoginPage,
   },
   {
-    path: "/register",
-    name: "LoginView",
-    component: LoginView,
+    path: "/register-page",
+    name: "RegisterView",
+    component: RegisterPage,
   },
   {
     path: "/dog-walker",
@@ -78,7 +78,7 @@ router.beforeEach((to, from, next) => {
     } else {
       alert("You must be logged in to see this page");
       next({
-        path: "/",
+        path: "/login-page",
       });
     }
   } else {

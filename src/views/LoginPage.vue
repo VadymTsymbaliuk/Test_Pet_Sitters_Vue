@@ -22,8 +22,13 @@
             >
           </div>
           <div class="d-flex flex-column mb-3">
-            <input placeholder="login" type="text" v-model="email" />
-            <input placeholder="Password" type="text" v-model="password" />
+            <input placeholder="login" type="email" v-model="email" required />
+            <input
+              placeholder="Password"
+              type="password"
+              v-model="password"
+              required
+            />
             <button class="d-block m-auto" @click="login">login</button>
           </div>
           <div class="">
@@ -44,7 +49,7 @@
 import firebase from "firebase/compat/app";
 
 export default {
-  name: "HomeView",
+  name: "LoginPage",
   components: {},
   data() {
     return {

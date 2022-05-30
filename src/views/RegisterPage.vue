@@ -47,6 +47,27 @@
           </form>
           <div>
             <h2>Register</h2>
+            <div class="radio-container">
+              <div>{{ pickedUser }}</div>
+              <label for="pet-owner">Pet owner</label>
+              <input
+                type="radio"
+                id="pet-owner"
+                v-model="pickedUser"
+                value="pet owner"
+                @click="checkUser"
+                checked
+              />
+
+              <label for="pet-sitter">Pet sitter</label>
+              <input
+                type="radio"
+                id="pet-sitter"
+                v-model="pickedUser"
+                value="pet sitter"
+                @click="checkUser"
+              />
+            </div>
             <input
               type="email"
               placeholder="Email address..."
@@ -57,6 +78,21 @@
               placeholder="password..."
               v-model="authPassword"
             />
+            <input placeholder="Name" type="text" v-model="user.name" />
+            <input
+              placeholder="Last name"
+              type="text"
+              v-model="user.lastName"
+            />
+            <input placeholder="Phone" type="text" v-model="user.phone" />
+            <input placeholder="Countries" type="text" v-model="user.country" />
+            <input
+              placeholder="Profession"
+              type="text"
+              v-model="user.profession"
+              id="profession"
+            />
+            <input placeholder="City" type="text" v-model="user.city" />
             <button @click="register">Register</button>
           </div>
           <div class="wrapper_text_info">
@@ -78,12 +114,22 @@ import firebase from "firebase/compat/app";
 require("firebase/compat/auth");
 
 export default {
-  name: "HomeView",
+  name: "RegisterPage",
   components: {},
   data() {
     return {
+      user: {
+        name: "",
+        phone: null,
+        email: "",
+        lastName: "",
+        country: "",
+        city: "",
+        profession: "",
+      },
       authEmail: "",
       authPassword: "",
+      pickedUser: "pet owner",
     };
   },
   setup() {
@@ -111,7 +157,20 @@ export default {
     };
   },
   methods: {
+    checkUser() {
+      if (this.pickedUser === "pet sitter") {
+        console.log(this.pickedUser);
+        document.querySelector("#profession").style.display = "block";
+      } else {
+        console.log(this.pickedUser);
+        document.querySelector("#profession").style.display = "none";
+      }
+    },
+    addUserInformation() {
+      createUser({ ...this.user });
+    },
     register() {
+      this.addUserInformation();
       firebase
         .auth()
         .createUserWithEmailAndPassword(this.authEmail, this.authPassword)
@@ -196,6 +255,10 @@ a.privacy_policy {
 
 .text-color_green {
   color: #a6ce39;
+}
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 968px) {
